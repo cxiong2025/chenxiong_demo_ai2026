@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>本周机器人十大新闻</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: #0c1220;
+    color: #d8e0e8;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container { max-width: 740px; margin: 0 auto; }
+
+  .header { text-align: center; padding: 30px 0 20px; }
+  .header h1 { font-size: 28px; color: #fff; margin-bottom: 8px; }
+  .header .subtitle { color: #7a8a9a; font-size: 14px; }
+  .header .date { color: #7a8a9a; font-size: 13px; margin-top: 4px; }
+
+  .player {
+    background: #19273a;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 20px 0;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  }
+  .player-title {
+    font-size: 16px; color: #fff; margin-bottom: 16px; font-weight: 600;
+  }
+  .player-title .playing-indicator {
+    display: inline-flex; align-items: center; gap: 3px; margin-left: 10px;
+    font-size: 12px; color: #0f9d58; visibility: hidden;
+  }
+  .player-title .playing-indicator.active { visibility: visible; }
+  .player-title .playing-indicator .bar {
+    display: inline-block; width: 3px; background: #0f9d58; border-radius: 1px;
+    animation: soundBar 0.8s infinite ease-in-out;
+  }
+  .player-title .playing-indicator .bar:nth-child(1) { height: 10px; animation-delay: 0s; }
+  .player-title .playing-indicator .bar:nth-child(2) { height: 14px; animation-delay: 0.15s; }
+  .player-title .playing-indicator .bar:nth-child(3) { height: 8px; animation-delay: 0.3s; }
+  .player-title .playing-indicator .bar:nth-child(4) { height: 12px; animation-delay: 0.45s; }
+  .player-title .playing-indicator .bar:nth-child(5) { height: 6px; animation-delay: 0.6s; }
+  @keyframes soundBar { 0%, 100% { transform: scaleY(0.4); } 50% { transform: scaleY(1); } }
+
+  .ctrl-row { display: flex; align-items: center; gap: 14px; }
+  .play-btn {
+    width: 26px; height: 26px; background: #0f9d58; border: none; border-radius: 5px;
+    color: #fff; font-size: 11px; cursor: pointer; display: flex; align-items: center;
+    justify-content: center; flex-shrink: 0; transition: background 0.2s; line-height: 1;
+  }
+  .play-btn:hover { background: #0f2563eb; }
+  .prog-area { flex: 1; display: flex; align-items: center; gap: 10px; }
+  .time-el { font-size: 13px; color: #7a8a9a; white-space: nowrap; font-variant-numeric: tabular-nums; min-width: 38px; }
+  .prog-track {
+    flex: 1; height: 8px; background: #0d1520; border-radius: 4px; cursor: pointer; position: relative;
+  }
+  .prog-fill { height: 100%; background: #0f9d58; border-radius: 4px; width: 0%; transition: width 0.15s linear; }
+  .vol-area { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+  .vol-icon { font-size: 16px; cursor: pointer; color: #7a8a9a; transition: color 0.2s; }
+  .vol-icon:hover { color: #0f9d58; }
+  .vol-slider {
+    width: 70px; height: 4px; -webkit-appearance: none; appearance: none;
+    background: #0d1520; border-radius: 2px; outline: none; cursor: pointer;
+  }
+  .vol-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 12px; height: 12px;
+    background: #0f9d58; border-radius: 50%; cursor: pointer;
+  }
+
+  .tags { text-align: center; margin: 10px 0 20px; }
+  .tags span { display: inline-block; background: #152232; color: #7a8a9a; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin: 4px; border: 1px solid rgba(255,255,255,0.06); }
+
+  .section { background: #152232; border-radius: 12px; padding: 20px 24px; margin: 16px 0; border: 1px solid rgba(255,255,255,0.04); transition: border-color 0.3s; }
+  .section:hover { border-color: #0f9d5840; }
+  .section-number { display: inline-block; background: #0f9d58; color: #fff; width: 28px; height: 28px; line-height: 28px; text-align: center; border-radius: 50%; font-size: 14px; font-weight: bold; margin-right: 10px; vertical-align: middle; }
+  .section.opening .section-number { background: #0f2563eb; }
+  .section.closing .section-number { background: #0F9D58; }
+  .section-title { font-size: 16px; font-weight: 600; color: #fff; vertical-align: middle; }
+  .section-tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; margin-left: 10px; vertical-align: middle; }
+  .tag-hot { background: #dc2626; color: #fff; }
+  .tag-trend { background: #0F9D58; color: #fff; }
+  .tag-business { background: #7c3aed; color: #fff; }
+  .tag-policy { background: #F59E0B; color: #fff; }
+  .section p { margin-top: 12px; line-height: 1.8; font-size: 15px; color: #b0bec5; text-align: justify; }
+
+  .footer { text-align: center; padding: 30px 0; color: #4a5568; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>🔧 本周机器人十大新闻</h1>
+    <div class="subtitle">1个数字 · 10条新闻 · 快速了解机器人行业一周动态</div>
+    <div class="date">📅 2026年6月22日（周一） ~ 2026年6月26日（周五）</div>
+  </div>
+
+  <div class="player">
+    <div class="player-title">
+      🎙️ 音频播报
+      <span class="playing-indicator" id="playingIndicator">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span> 正在播放
+      </span>
+    </div>
+    <audio id="audioPlayer" preload="auto">
+      <source src="robot_20260622_26.mp3" type="audio/mpeg">
+    </audio>
+    <div class="ctrl-row">
+      <button class="play-btn" id="playBtn" title="播放 / 暂停">▶</button>
+      <div class="prog-area">
+        <span class="time-el" id="curTime">00:00</span>
+        <div class="prog-track" id="progTrack"><div class="prog-fill" id="progFill"></div></div>
+        <span class="time-el" id="totTime">00:00</span>
+      </div>
+      <div class="vol-area">
+        <span class="vol-icon" id="volIcon" title="静音/恢复">🔊</span>
+        <input type="range" class="vol-slider" id="volSlider" min="0" max="100" value="80">
+      </div>
+    </div>
+  </div>
+
+  <div class="tags">
+<span>#机器人</span><span>#人形机器人</span><span>#具身AI</span><span>#自动化</span><span>#Nvidia</span><span>#Agility</span>
+  </div>
+
+  <div class="section opening">
+    <span class="section-number">导</span><span class="section-title">开场</span>
+    <p>大家好，欢迎收看本周机器人科技速报，我是你们的主播。本周全球机器人领域有十条重磅新闻，我们用一个简单的数字，快速了解机器人行业的最新动态。准备好，我们开始。</p>
+  </div>
+
+  <div class="section">
+    <span class="section-number">1</span><span class="section-title">人形机器人直播：机器人制造商争相展示真实生产线上的机器</span>
+    <span class="section-tag tag-hot">🔥 重磅</span>
+    <p>Forbes报道，中国具身AI公司Agibo等机器人制造商正在争相展示能够在真实生产线上工作的机器人。这一趋势表明人形机器人正从实验室走向工厂车间，商业化进程加速。多家初创企业展示了机器人在装配、搬运等场景的实际应用能力。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">2</span><span class="section-title">摩根士丹利将中国人形机器人出货量预测翻倍，商业化加速</span>
+    <span class="section-tag tag-business">💼 商业</span>
+    <p>摩根士丹利将中国人形机器人出货量预测翻倍，认为商业化进程正在加速。CNBC报道指出，随着生产成本下降和应用场景拓展，中国人形机器人市场将迎来爆发式增长。这一预测反映了投资者对人形机器人商业化的高度信心。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">3</span><span class="section-title">欧洲机器人竞赛开启，中国成为最大竞争对手</span>
+    <span class="section-tag tag-trend">📈 趋势</span>
+    <p>Malay Mail报道，在欧洲VivaTech 2026展会上，人形机器人成为焦点。从葡萄采摘到迎宾接待，欧洲机器人初创企业展示了多种应用场景。但报道也指出，中国企业在人形机器人领域的快速崛起已成为欧洲最大的竞争对手。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">4</span><span class="section-title">Agility Robotics计划以25亿美元估值通过SPAC上市</span>
+    <span class="section-tag tag-business">💼 商业</span>
+    <p>TechCrunch报道，人形机器人公司Agility Robotics计划通过SPAC方式上市，估值达25亿美元。这将是人形机器人领域近年来最大规模的IPO之一，标志着该行业正逐步走向成熟和资本化。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">5</span><span class="section-title">人形机器人供应超过需求，AMR进入丰田工厂，机器人订单保持稳定</span>
+    <span class="section-tag tag-trend">📈 趋势</span>
+    <p>MarketScale报道，2026年中期的自动化行业呈现出复杂局面：人形机器人供应开始超过需求，自主移动机器人（AMR）进入丰田工厂，而机器人订单整体保持稳定。这反映出机器人行业正在经历结构性调整。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">6</span><span class="section-title">英伟达寻求让人形AI机器人在人类周围更安全</span>
+    <span class="section-tag tag-trend">📈 趋势</span>
+    <p>Bloomberg报道，英伟达正在推进人形AI机器人的安全标准，确保机器人在人类环境中能够安全运行。这一举措反映了行业对机器人安全问题的重视，也为大规模商业化铺平了道路。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">7</span><span class="section-title">供应商看好五万亿美元人形机器人市场，尽管价值捕获存忧</span>
+    <span class="section-tag tag-business">💼 商业</span>
+    <p>Automotive News报道，供应商们正在展望五万亿美元的人形机器人市场，尽管对价值捕获仍存在担忧。June二十四日的报道指出，虽然市场规模巨大，但如何在这一市场中获得合理的利润回报仍是行业面临的挑战。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">8</span><span class="section-title">欧洲机器人初创企业挑战中国巨头</span>
+    <span class="section-tag tag-trend">📈 趋势</span>
+    <p>Taipei Times报道，欧洲机器人初创企业正在积极应对中国巨头的竞争。报道指出，欧洲大陆需要这一经济支柱来维持自身发展，人形机器人被视为关键赛道。VivaTech 2026展会上，多家欧洲企业展示了最新成果。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">9</span><span class="section-title">OLO Robotics让机器人编程人人可用</span>
+    <span class="section-tag tag-trend">📈 趋势</span>
+    <p>Robotics & Automation News报道，OLO Robotics的COO Eleanor Tang-Smith表示，公司的目标是让机器人编程变得通俗易懂，降低行业门槛。这一理念有助于更多人参与到机器人开发中来，推动行业创新。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">10</span><span class="section-title">Sharpa的Alicia Veneziani：灵巧操作是有用人形机器人的关键</span>
+    <span class="section-tag tag-business">💼 商业</span>
+    <p>Robotics & Automation News对Sharpa的Alicia Veneziani进行了专访，她指出灵巧操作是实现有用的人形机器人的关键技术。多家科技公司正在攻克这一难题，以期让人形机器人能够完成更复杂的任务。</p>
+  </div>
+
+  <div class="section closing">
+    <span class="section-number">结</span><span class="section-title">总结</span>
+    <p>总结一下，本周的机器人领域关键词：人形机器人直播：机器人制造商争相展示真实生产线上的机器、摩根士丹利将中国人形机器人出货量预测翻倍，商业化加速、欧洲机器人竞赛开启，中国成为最大竞争对手、Agility Robotics计划以25亿美元估值通过SPAC上市、人形机器人供应超过需求，AMR进入丰田工厂，机器人订单保持稳定、英伟达寻求让人形AI机器人在人类周围更安全、供应商看好五万亿美元人形机器人市场，尽管价值捕获存忧、欧洲机器人初创企业挑战中国巨头、OLO Robotics让机器人编程人人可用、Sharpa的Alicia Veneziani：灵巧操作是有用人形机器人的关键。机器人正在重塑全球政治经济格局。这就是本周机器人科技速报，我们下周再见，拜拜！</p>
+  </div>
+
+  <div class="footer">
+    数据来源：Forbes · CNBC · Morgan Stanley · Malay Mail · Tech Xplore · TechCrunch · MarketScale · Bloomberg · Automotive News · Taipei Times · Tech Xplore · Robotics & Automation News · Robotics & Automation News<br>
+    仅供学习参考，不构成任何投资或商业决策建议
+  </div>
+</div>
+
+<script>
+  var audio=document.getElementById('audioPlayer'),playBtn=document.getElementById('playBtn'),progFill=document.getElementById('progFill'),progTrack=document.getElementById('progTrack'),curTimeEl=document.getElementById('curTime'),totTimeEl=document.getElementById('totTime'),playingIndicator=document.getElementById('playingIndicator'),volSlider=document.getElementById('volSlider'),volIcon=document.getElementById('volIcon');
+  audio.volume=0.8;
+  function fmt(sec){var m=Math.floor(sec/60),s=Math.floor(sec%60);return(m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  audio.addEventListener('loadedmetadata',function(){totTimeEl.textContent=fmt(audio.duration);});
+  audio.addEventListener('timeupdate',function(){if(audio.duration){progFill.style.width=(audio.currentTime/audio.duration*100)+'%';curTimeEl.textContent=fmt(audio.currentTime);}});
+  audio.addEventListener('ended',function(){playBtn.textContent='▶';playingIndicator.classList.remove('active');progFill.style.width='100%';});
+  playBtn.addEventListener('click',function(){if(audio.paused){audio.play();playBtn.textContent='⏸';playingIndicator.classList.add('active');}else{audio.pause();playBtn.textContent='▶';playingIndicator.classList.remove('active');}});
+  progTrack.addEventListener('click',function(e){var rect=progTrack.getBoundingClientRect();audio.currentTime=((e.clientX-rect.left)/rect.width)*audio.duration;});
+  volSlider.addEventListener('input',function(){audio.volume=this.value/100;if(this.value==0)volIcon.textContent='🔇';else if(this.value<50)volIcon.textContent='🔉';else volIcon.textContent='🔊';});
+  volIcon.addEventListener('click',function(){if(audio.volume>0){audio.volume=0;volSlider.value=0;volIcon.textContent='🔇';}else{audio.volume=0.8;volSlider.value=80;volIcon.textContent='🔊';}});
+</script>
+</body>
+</html>

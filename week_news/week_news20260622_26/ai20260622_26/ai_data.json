@@ -1,0 +1,77 @@
+{
+  "topic": "AI",
+  "date_range": "2026年6月22日（周一） ~ 2026年6月26日（周五）",
+  "news_count": 10,
+  "news": [
+    {
+      "title": "Anthropic与OpenAI双双提交IPO申请，AI巨头集体登陆资本市场",
+      "tag": "hot",
+      "tag_label": "🔥 重磅",
+      "summary": "AI行业迎来历史性时刻——Anthropic和OpenAI两大巨头先后秘密提交了IPO申请。Anthropic于六月一号提交机密S一文件，目标估值高达九千六百五十亿美元。OpenAI随后也悄悄递交了上市文件，目标估值直指一万亿美元。如果顺利，这将是全球科技史上规模最大、关注度最高的IPO组合拳。这意味着AI行业正式从风投游戏进入公众审视阶段。一万亿美金的估值背后，是市场对AGI的终极赌注。",
+      "source": "CNBC · TechCrunch"
+    },
+    {
+      "title": "Apple WWDC 2026：Siri搭载Google Gemini大升级，首推独立Siri App",
+      "tag": "hot",
+      "tag_label": "🔥 重磅",
+      "summary": "在WWDC 2026上，苹果带来了AI领域最大胆的举动——将Siri的底层模型从自研转向了Google的Gemini。全新Siri对话能力大幅提升，能够理解上下文、处理多步骤任务，跨应用自然交互。苹果还首次推出了独立的Siri App。苹果强调隐私保护，称用户数据仅用于服务请求，且可由外部专家审计。这标志着苹果生态与谷歌AI两大巨头的深度结盟。",
+      "source": "The Verge · Apple"
+    },
+    {
+      "title": "SpaceX与xAI合并，发射首颗太空AI数据中心AI1",
+      "tag": "trend",
+      "tag_label": "📈 趋势",
+      "summary": "SpaceX的IPO成功使其市值突破两万亿美元，随后SpaceX与马斯克旗下的xAI宣布合并。SpaceX还首次公开了其首颗轨道级AI数据中心AI一，算力载荷可达一百二十到一百五十千瓦。马斯克表示这项技术基于现有的Starlink网络，工程挑战并不显著。算力不再局限于地面数据中心，太空将成为新的AI计算前沿。",
+      "source": "SpaceX · xAI"
+    },
+    {
+      "title": "英伟达大举进军CPU市场，直接挑战AMD和英特尔",
+      "tag": "hot",
+      "tag_label": "🔥 重磅",
+      "summary": "英伟达宣布推出自研服务器和客户端CPU产品，直接挑战AMD和英特尔的传统优势领域。消息发布当天AMD股价下跌了百分之四点七四。英伟达已经占据了GPU这个AI时代最关键的算力芯片，如今再吞并CPU市场，意味着它有可能掌控整个AI算力底层。这对芯片行业格局将是地震级冲击。",
+      "source": "Reuters · Bloomberg"
+    },
+    {
+      "title": "摩根士丹利预测：2026年全球AI债务融资将突破五千亿美元",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "summary": "摩根士丹利预测，2026年全球AI相关债务融资规模将超过五千亿美元，主要由超大规模云计算企业的AI基础设施建设需求驱动。五千亿美元的债务融资规模反映了AI基础设施建设正在进入超级工程级别，但同时也值得警惕大规模AI债务可能引发的风险暴露。",
+      "source": "Morgan Stanley"
+    },
+    {
+      "title": "AI可能在未来几个月内突破政府和商业防御，美国情报机构警告",
+      "tag": "hot",
+      "tag_label": "🔥 重磅",
+      "summary": "美国及其情报伙伴警告，能够发起重大网络攻击、压倒政府和商业防御的AI模型已在数月之内，而非数年之外。CNN报道指出，这一警告来自美国情报界的联合评估，强调AI安全威胁的紧迫性正在急剧上升。",
+      "source": "CNN"
+    },
+    {
+      "title": "中国迎来又一波AI热潮，新模型缩小与美国的差距",
+      "tag": "trend",
+      "tag_label": "📈 趋势",
+      "summary": "《经济学人》报道，中国正在经历新一轮AI爆发，新发布的模型大幅缩小了与美国的技术差距。美国在人工智能领域的领先地位正面临前所未有的挑战。这一趋势引发了关于全球AI竞争格局重塑的广泛讨论。",
+      "source": "The Economist"
+    },
+    {
+      "title": "企业AI实施落后正在损失客户和人才，Thomson Reuters报告揭示",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "summary": "Thomson Reuters六月二十二日发布报告指出，AI已经准备好了，但企业还没有。未能实施AI的企业正在失去客户和人才。报告强调，AI落地已成为企业竞争力的核心指标，落后者将面临严重的市场淘汰风险。",
+      "source": "Thomson Reuters"
+    },
+    {
+      "title": "VivaTech 2026聚焦企业AI治理合规，阿诺特与贝佐斯共话责任创新",
+      "tag": "trend",
+      "tag_label": "📈 趋势",
+      "summary": "欧洲最大科技展会VivaTech 2026将企业AI作为核心主题，讨论从实验阶段走向规模化落地。LVMH集团总裁阿诺特和亚马逊创始人贝佐斯在开幕式上共同表示，AI是推动负责任创新的关键驱动力。企业AI治理、合规、安全和运营可靠性成为焦点议题。",
+      "source": "VivaTech · fashionunited"
+    },
+    {
+      "title": "英伟达联手宇树科技发布物理AI开发者系统，宇树拟上海IPO",
+      "tag": "hot",
+      "tag_label": "🔥 重磅",
+      "summary": "英伟达与国产人形机器人厂商宇树科技合作推出面向开发者的机器人系统，宇树科技也计划在上海进行IPO。这意味着让AI拥有身体的这件事，正在从少数大厂的游戏变成广大开发者的基础设施。",
+      "source": "Forbes · 36氪"
+    }
+  ]
+}

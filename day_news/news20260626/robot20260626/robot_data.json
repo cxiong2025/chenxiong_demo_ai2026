@@ -1,0 +1,71 @@
+{
+  "date": "2026-06-26",
+  "topic": "机器人",
+  "news_count": 8,
+  "news": [
+    {
+      "rank": 1,
+      "title": "这家香港商店解雇了人类。现在由机器人运营",
+      "tag": "hot",
+      "tag_label": "🔥 最重磅",
+      "tag_class": "tag-hot",
+      "content": "香港一家商店解雇了所有人类员工，完全由机器人运营。这是零售业自动化的重要里程碑。"
+    },
+    {
+      "rank": 2,
+      "title": "从Fortnite到机器人：General Intuition融资23亿美元",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "tag_class": "tag-business",
+      "content": "General Intuition融资23亿美元，押注电子游戏可以训练AI代理进入现实世界。"
+    },
+    {
+      "rank": 3,
+      "title": "Agility Robotics以25亿美元估值进军华尔街",
+      "tag": "trend",
+      "tag_label": "🚀 前沿",
+      "tag_class": "tag-trend",
+      "content": "Agility Robotics正在以25亿美元的估值进军华尔街，计划用人形机器人填充仓库。"
+    },
+    {
+      "rank": 4,
+      "title": "中国电信业启动GSMA的IQ时代移动AI：MWC上海2026",
+      "tag": "policy",
+      "tag_label": "🏛️ 政策",
+      "tag_class": "tag-policy",
+      "content": "世界移动通信大会上海2026开幕，GSMA的IQ时代移动AI愿景已经 underway。"
+    },
+    {
+      "rank": 5,
+      "title": "供应商看好5万亿美元人形机器人市场",
+      "tag": "hot",
+      "tag_label": "🔥 最重磅",
+      "tag_class": "tag-hot",
+      "content": "供应商看好5万亿美元人形机器人市场，尽管存在价值捕获担忧。"
+    },
+    {
+      "rank": 6,
+      "title": "锂电池需求超越电动汽车：AI、核能和机器人将驱动72万吨需求至2050年",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "tag_class": "tag-business",
+      "content": "电动汽车将继续是锂电池需求的主要驱动力至少15年，但各种新兴技术——涵盖人工智能到下一代核能——到2050年将推动72万吨的需求。"
+    },
+    {
+      "rank": 7,
+      "title": "Seer Robotics亮相香港市场，称香港是具身AI门户",
+      "tag": "trend",
+      "tag_label": "🚀 前沿",
+      "tag_class": "tag-trend",
+      "content": "总部位于上海的机器人制造商Seer Robotics以提供机器人大脑而闻名，在香港市场首次亮相。"
+    },
+    {
+      "rank": 8,
+      "title": "Waymo转向加拿大车队管理器Element监督部分robotaxi车队",
+      "tag": "policy",
+      "tag_label": "🏛️ 政策",
+      "tag_class": "tag-policy",
+      "content": "Waymo转向加拿大车队管理器Element监督部分robotaxi车队。"
+    }
+  ]
+}

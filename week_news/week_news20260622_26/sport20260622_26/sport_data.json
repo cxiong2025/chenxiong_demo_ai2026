@@ -1,0 +1,77 @@
+{
+  "topic": "体育",
+  "date_range": "2026年6月22日（周一） ~ 2026年6月26日（周五）",
+  "news_count": 10,
+  "news": [
+    {
+      "title": "塞雷娜·威廉姆斯接受外卡邀请，将以44岁高龄重返温网单打赛场",
+      "tag": "hot",
+      "tag_label": "🔥 重磅",
+      "summary": "AP News报道，塞雷娜·威廉姆斯接受了温布尔登的外卡邀请，将以四十四岁的年龄重返单打赛场。这一决定被媒体称为\"大胆的回归\"，CNN评价为\"塞雷娜式的塞雷娜\"。作为二十二个大满贯冠军得主，塞雷娜的每一次出场都备受关注。",
+      "source": "AP News · CNN"
+    },
+    {
+      "title": "国际网球联合会更名为世界网球",
+      "tag": "trend",
+      "tag_label": "📈 趋势",
+      "summary": "华盛顿邮报报道，国际网球联合会（ITF）正式更名为世界网球（World Tennis），延续了体育界更名趋势。这一变革旨在提升品牌的全球影响力和商业价值，反映了网球运动在全球范围内的持续增长。",
+      "source": "The Washington Post"
+    },
+    {
+      "title": "两届美国公开赛冠军温德姆·克拉克状态回升",
+      "tag": "trend",
+      "tag_label": "📈 趋势",
+      "summary": "CNN报道，两届美国公开赛冠军温德姆·克拉克近期状态回升，引发了高尔夫球界的广泛关注。克拉克表示，他正在通过调整训练方法和心态管理，力求在大满贯赛事中取得更好成绩。",
+      "source": "CNN"
+    },
+    {
+      "title": "足球带来人们之间的联系，超越背景差异",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "summary": "CNN报道，足球作为一项全球性运动，正在跨越文化和社会背景的差异，将人们紧密联系在一起。这一报道强调了体育在促进社会包容和理解方面的重要作用。",
+      "source": "CNN"
+    },
+    {
+      "title": "父亲们通过足球和悲伤找到彼此",
+      "tag": "trend",
+      "tag_label": "📈 趋势",
+      "summary": "CNN报道，一群父亲通过足球运动和在悲痛中的相互支持建立了深厚的友谊。这个故事展现了体育在个人情感疗愈和社区建设方面的独特价值。",
+      "source": "CNN"
+    },
+    {
+      "title": "Terra Wortmann公开赛2026精彩上演",
+      "tag": "trend",
+      "tag_label": "📈 趋势",
+      "summary": "Sky Sports报道，Terra Wortmann公开赛二零二六赛季正在进行中，吸引了众多顶级选手参赛。比赛的高水平竞技和激烈对抗为观众带来了精彩的视觉盛宴。",
+      "source": "Sky Sports"
+    },
+    {
+      "title": "Meijer LPGA经典赛2026即将开赛",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "summary": "Sky Sports报道，Meijer LPGA经典赛二零二六赛季即将拉开帷幕。作为女子高尔夫球的重要赛事之一，本届比赛预计将吸引全球顶尖女选手参赛。",
+      "source": "Sky Sports"
+    },
+    {
+      "title": "亚特兰大勇士队对阵圣地亚哥教士队",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "summary": "Yahoo Sports报道，MLB常规赛亚特兰大勇士队对阵圣地亚哥教士队的比赛备受关注。两支强队的对决将为球迷带来精彩的棒球盛宴。",
+      "source": "Yahoo Sports"
+    },
+    {
+      "title": "世界杯赛事持续进行，全球球迷热情不减",
+      "tag": "hot",
+      "tag_label": "🔥 重磅",
+      "summary": "Yahoo Sports报道，世界杯赛事 ongoing，全球球迷的热情丝毫未减。多场比赛的精彩表现和激烈竞争让本届世界杯成为了近年来最受关注的体育赛事之一。",
+      "source": "Yahoo Sports"
+    },
+    {
+      "title": "体育界多元化趋势加剧，少数族裔球员获得更多机会",
+      "tag": "trend",
+      "tag_label": "📈 趋势",
+      "summary": "Sky Sports报道，英国南亚裔球员在足球领域获得了更多机会和认可。这一趋势反映了体育界在多元化和包容性方面的积极进展，也为年轻一代树立了榜样。",
+      "source": "Sky Sports"
+    }
+  ]
+}

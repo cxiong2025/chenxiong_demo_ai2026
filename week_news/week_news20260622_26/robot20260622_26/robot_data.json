@@ -1,0 +1,77 @@
+{
+  "topic": "机器人",
+  "date_range": "2026年6月22日（周一） ~ 2026年6月26日（周五）",
+  "news_count": 10,
+  "news": [
+    {
+      "title": "人形机器人直播：机器人制造商争相展示真实生产线上的机器",
+      "tag": "hot",
+      "tag_label": "🔥 重磅",
+      "summary": "Forbes报道，中国具身AI公司Agibo等机器人制造商正在争相展示能够在真实生产线上工作的机器人。这一趋势表明人形机器人正从实验室走向工厂车间，商业化进程加速。多家初创企业展示了机器人在装配、搬运等场景的实际应用能力。",
+      "source": "Forbes"
+    },
+    {
+      "title": "摩根士丹利将中国人形机器人出货量预测翻倍，商业化加速",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "summary": "摩根士丹利将中国人形机器人出货量预测翻倍，认为商业化进程正在加速。CNBC报道指出，随着生产成本下降和应用场景拓展，中国人形机器人市场将迎来爆发式增长。这一预测反映了投资者对人形机器人商业化的高度信心。",
+      "source": "CNBC · Morgan Stanley"
+    },
+    {
+      "title": "欧洲机器人竞赛开启，中国成为最大竞争对手",
+      "tag": "trend",
+      "tag_label": "📈 趋势",
+      "summary": "Malay Mail报道，在欧洲VivaTech 2026展会上，人形机器人成为焦点。从葡萄采摘到迎宾接待，欧洲机器人初创企业展示了多种应用场景。但报道也指出，中国企业在人形机器人领域的快速崛起已成为欧洲最大的竞争对手。",
+      "source": "Malay Mail · Tech Xplore"
+    },
+    {
+      "title": "Agility Robotics计划以25亿美元估值通过SPAC上市",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "summary": "TechCrunch报道，人形机器人公司Agility Robotics计划通过SPAC方式上市，估值达25亿美元。这将是人形机器人领域近年来最大规模的IPO之一，标志着该行业正逐步走向成熟和资本化。",
+      "source": "TechCrunch"
+    },
+    {
+      "title": "人形机器人供应超过需求，AMR进入丰田工厂，机器人订单保持稳定",
+      "tag": "trend",
+      "tag_label": "📈 趋势",
+      "summary": "MarketScale报道，2026年中期的自动化行业呈现出复杂局面：人形机器人供应开始超过需求，自主移动机器人（AMR）进入丰田工厂，而机器人订单整体保持稳定。这反映出机器人行业正在经历结构性调整。",
+      "source": "MarketScale"
+    },
+    {
+      "title": "英伟达寻求让人形AI机器人在人类周围更安全",
+      "tag": "trend",
+      "tag_label": "📈 趋势",
+      "summary": "Bloomberg报道，英伟达正在推进人形AI机器人的安全标准，确保机器人在人类环境中能够安全运行。这一举措反映了行业对机器人安全问题的重视，也为大规模商业化铺平了道路。",
+      "source": "Bloomberg"
+    },
+    {
+      "title": "供应商看好五万亿美元人形机器人市场，尽管价值捕获存忧",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "summary": "Automotive News报道，供应商们正在展望五万亿美元的人形机器人市场，尽管对价值捕获仍存在担忧。June二十四日的报道指出，虽然市场规模巨大，但如何在这一市场中获得合理的利润回报仍是行业面临的挑战。",
+      "source": "Automotive News"
+    },
+    {
+      "title": "欧洲机器人初创企业挑战中国巨头",
+      "tag": "trend",
+      "tag_label": "📈 趋势",
+      "summary": "Taipei Times报道，欧洲机器人初创企业正在积极应对中国巨头的竞争。报道指出，欧洲大陆需要这一经济支柱来维持自身发展，人形机器人被视为关键赛道。VivaTech 2026展会上，多家欧洲企业展示了最新成果。",
+      "source": "Taipei Times · Tech Xplore"
+    },
+    {
+      "title": "OLO Robotics让机器人编程人人可用",
+      "tag": "trend",
+      "tag_label": "📈 趋势",
+      "summary": "Robotics & Automation News报道，OLO Robotics的COO Eleanor Tang-Smith表示，公司的目标是让机器人编程变得通俗易懂，降低行业门槛。这一理念有助于更多人参与到机器人开发中来，推动行业创新。",
+      "source": "Robotics & Automation News"
+    },
+    {
+      "title": "Sharpa的Alicia Veneziani：灵巧操作是有用人形机器人的关键",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "summary": "Robotics & Automation News对Sharpa的Alicia Veneziani进行了专访，她指出灵巧操作是实现有用的人形机器人的关键技术。多家科技公司正在攻克这一难题，以期让人形机器人能够完成更复杂的任务。",
+      "source": "Robotics & Automation News"
+    }
+  ]
+}

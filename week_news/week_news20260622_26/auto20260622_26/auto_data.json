@@ -1,0 +1,77 @@
+{
+  "topic": "无人驾驶",
+  "date_range": "2026年6月22日（周一） ~ 2026年6月26日（周五）",
+  "news_count": 10,
+  "news": [
+    {
+      "title": "联合国通过首个全球自动驾驶汽车规则",
+      "tag": "hot",
+      "tag_label": "🔥 重磅",
+      "summary": "The Star报道，联合国通过了首个全球自动驾驶汽车监管框架，标志着自动驾驶行业进入了规范化发展的新阶段。这一规则为各国制定自动驾驶政策提供了基准，也将加速自动驾驶技术的商业化落地。CGTN和Tech Xplore也报道了这一重要事件。",
+      "source": "The Star · CGTN · Tech Xplore"
+    },
+    {
+      "title": "Waymo无人驾驶汽车将洛杉矶居民区街道变成停车场，邻居们忍无可忍",
+      "tag": "hot",
+      "tag_label": "🔥 重磅",
+      "summary": "Yahoo报道，Waymo的无人驾驶汽车正在将洛杉矶的居民区街道变成停车等待区，引起了附近居民的不满。邻居们抱怨车辆长时间停在路边，影响了社区的正常秩序。这一事件引发了人们对自动驾驶车辆运营管理模式的反思。",
+      "source": "Yahoo"
+    },
+    {
+      "title": "通用汽车CEO：AI正在编写其自动驾驶汽车90%的代码",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "summary": "Planetizen报道，通用汽车CEO表示，AI现在正在编写其自动驾驶汽车90%的代码，人类工程师的角色正在从编码者转变为监督者和策略制定者。这一转变标志着自动驾驶开发模式的根本性变革。",
+      "source": "Planetizen · 24/7 Wall St."
+    },
+    {
+      "title": "Waymo召回3800辆Robotaxi，谷歌自动驾驶梦想遭遇挑战？",
+      "tag": "hot",
+      "tag_label": "🔥 重磅",
+      "summary": "24/7 Wall St.报道，Waymo召回了三千八百辆Robotaxi，引发了外界对谷歌自动驾驶项目前景的质疑。这一召回事件是否意味着自动驾驶技术遇到了瓶颈，还是正常的运营调整，仍需观察。",
+      "source": "24/7 Wall St."
+    },
+    {
+      "title": "Zoox推出新一代Robotaxi",
+      "tag": "trend",
+      "tag_label": "📈 趋势",
+      "summary": "CleanTechnica报道，亚马逊旗下的Zoox推出了新一代Robotaxi，在设计和技术上都有显著提升。报道指出，Waymo在美国运营规模最大，而Zoox正在通过技术创新追赶。",
+      "source": "CleanTechnica"
+    },
+    {
+      "title": "美国即将取消无人驾驶车辆的刹车踏板要求",
+      "tag": "policy",
+      "tag_label": "📋 政策",
+      "summary": "Automotive News六月二十五日报道，美国即将取消对无人驾驶车辆的刹车踏板强制要求。这一政策变化将为完全无人驾驶车辆的商业化铺平道路，标志着自动驾驶监管的重大突破。",
+      "source": "Automotive News"
+    },
+    {
+      "title": "AVI-SPL在得州路线上启动无人驾驶卡车配送",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "summary": "avinteractive报道，AVI-SPL在得克萨斯州路线上启动了无人驾驶卡车配送服务。这一举措标志着长途货运自动驾驶技术的实际应用取得了重要进展。",
+      "source": "avinteractive"
+    },
+    {
+      "title": "瑞典可能反对特斯拉 Supervised 自动驾驶技术在欧洲超速",
+      "tag": "policy",
+      "tag_label": "📋 政策",
+      "summary": "Automotive News六月十九日报道，瑞典可能对特斯拉的监督式自动驾驶技术在欧洲的超速行为表示反对。这一事件引发了关于自动驾驶安全监管的广泛讨论。",
+      "source": "Automotive News"
+    },
+    {
+      "title": "日产将软件开发时间从数月缩短至数小时，追赶中国智能电动车",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "summary": "Automotive News六月二十四日报道，日产汽车宣布将软件开发时间从数月缩短至数小时，以追赶中国在智能电动车领域的领先地位。这一举措反映了传统车企在软件定义汽车时代的紧迫感。",
+      "source": "Automotive News"
+    },
+    {
+      "title": "韩国推进打破自动驾驶AI数据壁垒",
+      "tag": "policy",
+      "tag_label": "📋 政策",
+      "summary": "aju press报道，韩国政府正在推进打破自动驾驶AI的数据壁垒，以促进本土自动驾驶技术的发展。这一政策举措旨在为自动驾驶企业提供更多的数据支持和测试环境。",
+      "source": "aju press"
+    }
+  ]
+}

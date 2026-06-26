@@ -1,0 +1,71 @@
+{
+  "date": "2026-06-26",
+  "topic": "AI",
+  "news_count": 8,
+  "news": [
+    {
+      "rank": 1,
+      "title": "Anthropic指控阿里巴巴非法提取Claude AI模型",
+      "tag": "hot",
+      "tag_label": "🔥 最重磅",
+      "tag_class": "tag-hot",
+      "content": "Anthropic指控阿里巴巴集团进行了工业规模的Claude AI提取活动。这一指控引发了中美科技竞争的新波澜。"
+    },
+    {
+      "rank": 2,
+      "title": "AI周报：美光提振芯片股，企业考虑AI相关裁员",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "tag_class": "tag-business",
+      "content": "美光帮助提振芯片股，同时AI实施导致裁员。Ciara Lee汇总了AI革命中的重大故事。"
+    },
+    {
+      "rank": 3,
+      "title": "律师被敦促挑战要求AI研究的客户",
+      "tag": "policy",
+      "tag_label": "🏛️ 政策",
+      "tag_class": "tag-policy",
+      "content": "康涅狄格联邦法官敦促律师在制裁听证会上抵制客户要求使用生成式AI工具进行法律研究，该技术无法替代专业判断。"
+    },
+    {
+      "rank": 4,
+      "title": "当AI成为旅行代理",
+      "tag": "trend",
+      "tag_label": "🚀 前沿",
+      "tag_class": "tag-trend",
+      "content": "AI助手不仅增加了另一个酒店分销渠道，而是将整个旅行漏斗压缩成一次对话，有望在一次传递中拥有发现、考虑和交易。"
+    },
+    {
+      "rank": 5,
+      "title": "OpenAI、微软被控抓取本地新闻网站",
+      "tag": "hot",
+      "tag_label": "🔥 最重磅",
+      "tag_class": "tag-hot",
+      "content": "OpenAI和微软被控非法抓取本地新闻网站内容用于AI训练。"
+    },
+    {
+      "rank": 6,
+      "title": "Kyndryl报告：AI采用加速， workforce准备成为ROI差异因素",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "tag_class": "tag-business",
+      "content": "Kyndryl发布第二年度人员准备报告，显示企业AI准备度下降，AI期望与执行之间的差距扩大。"
+    },
+    {
+      "rank": 7,
+      "title": "AI：人工超智能的危险与机遇",
+      "tag": "policy",
+      "tag_label": "🏛️ 政策",
+      "tag_class": "tag-policy",
+      "content": "斯坦福报告发现，一些最新的AI系统在博士级科学问题上匹配或超越了普通人类专家。AI正在超越人类。"
+    },
+    {
+      "rank": 8,
+      "title": "你准备好A2A商务了吗？",
+      "tag": "trend",
+      "tag_label": "🚀 前沿",
+      "tag_class": "tag-trend",
+      "content": "Agent-to-Agent商务正在改变商业格局，企业需要为AI代理之间的直接交易做好准备。"
+    }
+  ]
+}

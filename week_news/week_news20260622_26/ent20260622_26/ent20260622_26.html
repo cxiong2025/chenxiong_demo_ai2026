@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>本周娱乐十大新闻</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: #0c1220;
+    color: #d8e0e8;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container { max-width: 740px; margin: 0 auto; }
+
+  .header { text-align: center; padding: 30px 0 20px; }
+  .header h1 { font-size: 28px; color: #fff; margin-bottom: 8px; }
+  .header .subtitle { color: #7a8a9a; font-size: 14px; }
+  .header .date { color: #7a8a9a; font-size: 13px; margin-top: 4px; }
+
+  .player {
+    background: #19273a;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 20px 0;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  }
+  .player-title {
+    font-size: 16px; color: #fff; margin-bottom: 16px; font-weight: 600;
+  }
+  .player-title .playing-indicator {
+    display: inline-flex; align-items: center; gap: 3px; margin-left: 10px;
+    font-size: 12px; color: #0f9d58; visibility: hidden;
+  }
+  .player-title .playing-indicator.active { visibility: visible; }
+  .player-title .playing-indicator .bar {
+    display: inline-block; width: 3px; background: #0f9d58; border-radius: 1px;
+    animation: soundBar 0.8s infinite ease-in-out;
+  }
+  .player-title .playing-indicator .bar:nth-child(1) { height: 10px; animation-delay: 0s; }
+  .player-title .playing-indicator .bar:nth-child(2) { height: 14px; animation-delay: 0.15s; }
+  .player-title .playing-indicator .bar:nth-child(3) { height: 8px; animation-delay: 0.3s; }
+  .player-title .playing-indicator .bar:nth-child(4) { height: 12px; animation-delay: 0.45s; }
+  .player-title .playing-indicator .bar:nth-child(5) { height: 6px; animation-delay: 0.6s; }
+  @keyframes soundBar { 0%, 100% { transform: scaleY(0.4); } 50% { transform: scaleY(1); } }
+
+  .ctrl-row { display: flex; align-items: center; gap: 14px; }
+  .play-btn {
+    width: 26px; height: 26px; background: #a78bfa; border: none; border-radius: 5px;
+    color: #fff; font-size: 11px; cursor: pointer; display: flex; align-items: center;
+    justify-content: center; flex-shrink: 0; transition: background 0.2s; line-height: 1;
+  }
+  .play-btn:hover { background: #a72563eb; }
+  .prog-area { flex: 1; display: flex; align-items: center; gap: 10px; }
+  .time-el { font-size: 13px; color: #7a8a9a; white-space: nowrap; font-variant-numeric: tabular-nums; min-width: 38px; }
+  .prog-track {
+    flex: 1; height: 8px; background: #0d1520; border-radius: 4px; cursor: pointer; position: relative;
+  }
+  .prog-fill { height: 100%; background: #a78bfa; border-radius: 4px; width: 0%; transition: width 0.15s linear; }
+  .vol-area { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+  .vol-icon { font-size: 16px; cursor: pointer; color: #7a8a9a; transition: color 0.2s; }
+  .vol-icon:hover { color: #a78bfa; }
+  .vol-slider {
+    width: 70px; height: 4px; -webkit-appearance: none; appearance: none;
+    background: #0d1520; border-radius: 2px; outline: none; cursor: pointer;
+  }
+  .vol-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 12px; height: 12px;
+    background: #a78bfa; border-radius: 50%; cursor: pointer;
+  }
+
+  .tags { text-align: center; margin: 10px 0 20px; }
+  .tags span { display: inline-block; background: #152232; color: #7a8a9a; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin: 4px; border: 1px solid rgba(255,255,255,0.06); }
+
+  .section { background: #152232; border-radius: 12px; padding: 20px 24px; margin: 16px 0; border: 1px solid rgba(255,255,255,0.04); transition: border-color 0.3s; }
+  .section:hover { border-color: #a78bfa40; }
+  .section-number { display: inline-block; background: #a78bfa; color: #fff; width: 28px; height: 28px; line-height: 28px; text-align: center; border-radius: 50%; font-size: 14px; font-weight: bold; margin-right: 10px; vertical-align: middle; }
+  .section.opening .section-number { background: #a72563eb; }
+  .section.closing .section-number { background: #0F9D58; }
+  .section-title { font-size: 16px; font-weight: 600; color: #fff; vertical-align: middle; }
+  .section-tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; margin-left: 10px; vertical-align: middle; }
+  .tag-hot { background: #dc2626; color: #fff; }
+  .tag-trend { background: #0F9D58; color: #fff; }
+  .tag-business { background: #7c3aed; color: #fff; }
+  .tag-policy { background: #F59E0B; color: #fff; }
+  .section p { margin-top: 12px; line-height: 1.8; font-size: 15px; color: #b0bec5; text-align: justify; }
+
+  .footer { text-align: center; padding: 30px 0; color: #4a5568; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>🎬 本周娱乐十大新闻</h1>
+    <div class="subtitle">1个数字 · 10条新闻 · 快速了解娱乐圈一周动态</div>
+    <div class="date">📅 2026年6月22日（周一） ~ 2026年6月26日（周五）</div>
+  </div>
+
+  <div class="player">
+    <div class="player-title">
+      🎙️ 音频播报
+      <span class="playing-indicator" id="playingIndicator">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span> 正在播放
+      </span>
+    </div>
+    <audio id="audioPlayer" preload="auto">
+      <source src="ent_20260622_26.mp3" type="audio/mpeg">
+    </audio>
+    <div class="ctrl-row">
+      <button class="play-btn" id="playBtn" title="播放 / 暂停">▶</button>
+      <div class="prog-area">
+        <span class="time-el" id="curTime">00:00</span>
+        <div class="prog-track" id="progTrack"><div class="prog-fill" id="progFill"></div></div>
+        <span class="time-el" id="totTime">00:00</span>
+      </div>
+      <div class="vol-area">
+        <span class="vol-icon" id="volIcon" title="静音/恢复">🔊</span>
+        <input type="range" class="vol-slider" id="volSlider" min="0" max="100" value="80">
+      </div>
+    </div>
+  </div>
+
+  <div class="tags">
+<span>#娱乐</span><span>#电影</span><span>#音乐</span><span>#TaylorSwift</span><span>#时尚</span><span>#颁奖典礼</span>
+  </div>
+
+  <div class="section opening">
+    <span class="section-number">导</span><span class="section-title">开场</span>
+    <p>大家好，欢迎收看本周娱乐科技速报，我是你们的主播。本周全球娱乐领域有十条重磅新闻，我们用一个简单的数字，快速了解娱乐行业的最新动态。准备好，我们开始。</p>
+  </div>
+
+  <div class="section">
+    <span class="section-number">1</span><span class="section-title">泰勒·斯威夫特罗德岛海滩小镇的每一个线索都引发结婚传闻</span>
+    <span class="section-tag tag-hot">🔥 重磅</span>
+    <p>芝加哥论坛报报道，泰勒·斯威夫特在罗德岛的海滩小镇引发了广泛的结婚猜测。每一个细微线索都被媒体和粉丝解读为即将结婚的信号。这一话题在社交媒体上引发了热烈讨论，成为本周娱乐界最受关注的话题之一。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">2</span><span class="section-title">Clive Davis去世，享年94岁，音乐界传奇高管</span>
+    <span class="section-tag tag-hot">🔥 重磅</span>
+    <p>以色列时报六月二十三日报道，影响力巨大的犹太摇滚乐高管Clive Davis去世，享年94岁。Clive Davis被誉为音乐产业的传奇人物，曾发掘和培养众多顶级艺人，包括惠特尼·休斯顿、阿黛尔等。他的去世引发了音乐界的广泛哀悼。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">3</span><span class="section-title">Eslabon Armado发行新专辑《Nocturno》</span>
+    <span class="section-tag tag-trend">📈 趋势</span>
+    <p>USA Today报道，墨西哥音乐团体Eslabon Armado发行了新专辑《Nocturno》，继续巩固其在拉丁音乐领域的地位。这张专辑展现了乐队在音乐风格上的进一步探索，受到了乐迷和评论家的好评。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">4</span><span class="section-title">Cortis成员出席巴黎迪奥时装周</span>
+    <span class="section-tag tag-trend">📈 趋势</span>
+    <p>USA Today报道，K-pop组合Cortis的成员成勋、珠勛、健虎出席了巴黎迪奥时装周。这一活动展示了音乐与时尚的跨界融合，吸引了大量粉丝和媒体的关注。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">5</span><span class="section-title">Vice Ganda发布新歌《Talak》，致敬女性力量</span>
+    <span class="section-tag tag-trend">📈 趋势</span>
+    <p>ABS-CBN六月二十三日报道，菲律宾艺人Vice Ganda发布了新歌《Talak》，向女性和无畏的自我表达致敬。这首歌在东南亚地区引发了广泛共鸣，成为本周娱乐界的一股清流。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">6</span><span class="section-title">《The Invite》首映红毯：塞斯·罗根、奥利维亚·王尔德等亮相</span>
+    <span class="section-tag tag-hot">🔥 重磅</span>
+    <p>Page Six报道，电影《The Invite》的首映礼红毯星光熠熠，塞斯·罗根、奥利维亚·王尔德、佩内洛普·克鲁兹等明星悉数到场。这部电影备受期待，被认为是今年最值得关注的作品之一。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">7</span><span class="section-title">格伦·鲍威尔与佐伊·德彻特浪漫喜剧重聚</span>
+    <span class="section-tag tag-trend">📈 趋势</span>
+    <p>USA Today报道，演员格伦·鲍威尔和佐伊·德彻特将在一部新的浪漫喜剧中重逢。这对荧幕情侣的再次合作引发了影迷的热烈期待，预计将成为今夏最受欢迎的爱情片之一。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">8</span><span class="section-title">《速度与激情》续集可能在筹备中</span>
+    <span class="section-tag tag-business">💼 商业</span>
+    <p>USA Today报道，备受期待的《速度与激情》系列续集可能正在筹备中。这一消息引发了全球影迷的热情讨论，该系列全球票房已超过六十亿美元，是影史最成功的动作片系列之一。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">9</span><span class="section-title">迈阿密音乐节第十八届推出品牌大使计划</span>
+    <span class="section-tag tag-business">💼 商业</span>
+    <p>The National Law Review报道，第十八届年度迈阿密娱乐海滩音乐节推出了品牌大使计划。这一活动将继续吸引全球音乐爱好者，成为夏季最重要的音乐盛事之一。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">10</span><span class="section-title">AP摄影师捕捉本周最佳照片</span>
+    <span class="section-tag tag-trend">📈 趋势</span>
+    <p>AP News报道，美联社摄影师捕捉到了本周最具代表性的照片，涵盖了从政治到娱乐的多个领域。这些照片不仅记录了历史瞬间，也展现了摄影艺术的独特魅力。</p>
+  </div>
+
+  <div class="section closing">
+    <span class="section-number">结</span><span class="section-title">总结</span>
+    <p>总结一下，本周的娱乐领域关键词：泰勒·斯威夫特罗德岛海滩小镇的每一个线索都引发结婚传闻、Clive Davis去世，享年94岁，音乐界传奇高管、Eslabon Armado发行新专辑《Nocturno》、Cortis成员出席巴黎迪奥时装周、Vice Ganda发布新歌《Talak》，致敬女性力量、《The Invite》首映红毯：塞斯·罗根、奥利维亚·王尔德等亮相、格伦·鲍威尔与佐伊·德彻特浪漫喜剧重聚、《速度与激情》续集可能在筹备中、迈阿密音乐节第十八届推出品牌大使计划、AP摄影师捕捉本周最佳照片。娱乐正在重塑全球政治经济格局。这就是本周娱乐科技速报，我们下周再见，拜拜！</p>
+  </div>
+
+  <div class="footer">
+    数据来源：Chicago Tribune · The Times of Israel · USA Today · USA Today · ABS-CBN · Page Six · USA Today · USA Today · The National Law Review · AP News<br>
+    仅供学习参考，不构成任何投资或商业决策建议
+  </div>
+</div>
+
+<script>
+  var audio=document.getElementById('audioPlayer'),playBtn=document.getElementById('playBtn'),progFill=document.getElementById('progFill'),progTrack=document.getElementById('progTrack'),curTimeEl=document.getElementById('curTime'),totTimeEl=document.getElementById('totTime'),playingIndicator=document.getElementById('playingIndicator'),volSlider=document.getElementById('volSlider'),volIcon=document.getElementById('volIcon');
+  audio.volume=0.8;
+  function fmt(sec){var m=Math.floor(sec/60),s=Math.floor(sec%60);return(m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  audio.addEventListener('loadedmetadata',function(){totTimeEl.textContent=fmt(audio.duration);});
+  audio.addEventListener('timeupdate',function(){if(audio.duration){progFill.style.width=(audio.currentTime/audio.duration*100)+'%';curTimeEl.textContent=fmt(audio.currentTime);}});
+  audio.addEventListener('ended',function(){playBtn.textContent='▶';playingIndicator.classList.remove('active');progFill.style.width='100%';});
+  playBtn.addEventListener('click',function(){if(audio.paused){audio.play();playBtn.textContent='⏸';playingIndicator.classList.add('active');}else{audio.pause();playBtn.textContent='▶';playingIndicator.classList.remove('active');}});
+  progTrack.addEventListener('click',function(e){var rect=progTrack.getBoundingClientRect();audio.currentTime=((e.clientX-rect.left)/rect.width)*audio.duration;});
+  volSlider.addEventListener('input',function(){audio.volume=this.value/100;if(this.value==0)volIcon.textContent='🔇';else if(this.value<50)volIcon.textContent='🔉';else volIcon.textContent='🔊';});
+  volIcon.addEventListener('click',function(){if(audio.volume>0){audio.volume=0;volSlider.value=0;volIcon.textContent='🔇';}else{audio.volume=0.8;volSlider.value=80;volIcon.textContent='🔊';}});
+</script>
+</body>
+</html>

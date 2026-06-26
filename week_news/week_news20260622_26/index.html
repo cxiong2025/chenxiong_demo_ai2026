@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周新闻聚合 · 2026年6月22日-26日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: #0c1220;
+    color: #d8e0e8;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container { max-width: 760px; margin: 0 auto; }
+
+  .header { text-align: center; padding: 36px 0 32px; }
+  .header h1 {
+    font-size: 30px; color: #fff; margin-bottom: 8px;
+  }
+  .header .subtitle { color: #7a8a9a; font-size: 14px; }
+  .header .date { color: #7a8a9a; font-size: 13px; margin-top: 4px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  @media (max-width: 640px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    background: #152232;
+    border-radius: 16px;
+    padding: 28px 26px;
+    border: 1px solid rgba(255,255,255,0.04);
+    transition: border-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+  }
+  .card[data-theme="ai"] { --accent: #3b82f6; --accent-bg: rgba(59,130,246,0.1); }
+  .card[data-theme="sport"] { --accent: #f97316; --accent-bg: rgba(249,115,22,0.1); }
+  .card[data-theme="ent"] { --accent: #a78bfa; --accent-bg: rgba(167,139,250,0.1); }
+  .card[data-theme="robot"] { --accent: #0f9d58; --accent-bg: rgba(15,157,88,0.1); }
+  .card[data-theme="auto"] { --accent: #06b6d4; --accent-bg: rgba(6,182,212,0.1); }
+  .card:hover { border-color: var(--accent); }
+
+  .card-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+  .card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .card-topic {
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .card-desc {
+    font-size: 13px;
+    color: #7a8a9a;
+    line-height: 1.6;
+  }
+  .card-date {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 11px;
+    color: #4a5568;
+    background: #0d1520;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+  .card-arrow {
+    display: block;
+    text-align: right;
+    margin-top: 12px;
+    font-size: 16px;
+    color: var(--accent);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .card:hover .card-arrow { opacity: 1; }
+
+  .footer {
+    text-align: center;
+    padding: 36px 0;
+    color: #4a5568;
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📰 每周新闻聚合</h1>
+    <div class="subtitle">选择板块，快速进入对应新闻页面</div>
+    <div class="date">📅 2026年6月22日（周一） ~ 2026年6月26日（周五）</div>
+  </div>
+
+  <div class="grid">
+
+    <!-- AI -->
+    <a class="card" data-theme="ai" href="ai20260622_26/ai20260622_26.html">
+      <div class="card-icon">🤖</div>
+      <div class="card-title">AI 资讯</div>
+      <div class="card-topic">AI DEVELOPMENT</div>
+      <div class="card-desc">10条本周重磅新闻，快速了解AI行业最新动态</div>
+      <span class="card-date">2026-06-22 ~ 2026-06-26</span>
+      <span class="card-arrow">→</span>
+    </a>
+    <!-- 机器人 -->
+    <a class="card" data-theme="robot" href="robot20260622_26/robot20260622_26.html">
+      <div class="card-icon">🔧</div>
+      <div class="card-title">机器人 资讯</div>
+      <div class="card-topic">ROBOTICS</div>
+      <div class="card-desc">10条本周重磅新闻，快速了解机器人行业最新动态</div>
+      <span class="card-date">2026-06-22 ~ 2026-06-26</span>
+      <span class="card-arrow">→</span>
+    </a>
+    <!-- 娱乐 -->
+    <a class="card" data-theme="ent" href="ent20260622_26/ent20260622_26.html">
+      <div class="card-icon">🎬</div>
+      <div class="card-title">娱乐 资讯</div>
+      <div class="card-topic">ENTERTAINMENT</div>
+      <div class="card-desc">10条本周重磅新闻，快速了解娱乐行业最新动态</div>
+      <span class="card-date">2026-06-22 ~ 2026-06-26</span>
+      <span class="card-arrow">→</span>
+    </a>
+    <!-- 体育 -->
+    <a class="card" data-theme="sport" href="sport20260622_26/sport20260622_26.html">
+      <div class="card-icon">⚽</div>
+      <div class="card-title">体育 资讯</div>
+      <div class="card-topic">SPORTS</div>
+      <div class="card-desc">10条本周重磅新闻，快速了解体育行业最新动态</div>
+      <span class="card-date">2026-06-22 ~ 2026-06-26</span>
+      <span class="card-arrow">→</span>
+    </a>
+    <!-- 无人驾驶 -->
+    <a class="card" data-theme="auto" href="auto20260622_26/auto20260622_26.html">
+      <div class="card-icon">🚗</div>
+      <div class="card-title">无人驾驶 资讯</div>
+      <div class="card-topic">AUTONOMOUS DRIVING</div>
+      <div class="card-desc">10条本周重磅新闻，快速了解无人驾驶行业最新动态</div>
+      <span class="card-date">2026-06-22 ~ 2026-06-26</span>
+      <span class="card-arrow">→</span>
+    </a>
+  </div>
+
+  <div class="footer">
+    每周新闻聚合系统 · 点击卡片即可跳转<br>
+    数据来源：Reuters · AP News · Yahoo Sports · Forbes · NBC News 等
+  </div>
+</div>
+</body>
+</html>
