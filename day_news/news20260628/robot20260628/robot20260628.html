@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>##AI日更 · 2026年6月26日（星期五）</title>
+<title>机器人日更 · 2026年6月28日（星期日）</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -38,14 +38,14 @@
     gap: 3px;
     margin-left: 10px;
     font-size: 12px;
-    color: #f97316;
+    color: #0f9d58;
     visibility: hidden;
   }
   .player-title .playing-indicator.active { visibility: visible; }
   .player-title .playing-indicator .bar {
     display: inline-block;
     width: 3px;
-    background: #f97316;
+    background: #0f9d58;
     border-radius: 1px;
     animation: soundBar 0.8s infinite ease-in-out;
   }
@@ -61,7 +61,7 @@
   .ctrl-row { display: flex; align-items: center; gap: 14px; }
   .play-btn {
     width: 26px; height: 26px;
-    background: #f97316;
+    background: #0f9d58;
     border: none; border-radius: 5px;
     color: #fff; font-size: 11px;
     cursor: pointer;
@@ -70,14 +70,14 @@
     transition: background 0.2s;
     line-height: 1;
   }
-  .play-btn:hover { background: #f97316; }
+  .play-btn:hover { background: #0f9d58; }
   .prog-area { flex: 1; display: flex; align-items: center; gap: 10px; }
   .time-el { font-size: 13px; color: #7a8a9a; white-space: nowrap; font-variant-numeric: tabular-nums; min-width: 38px; }
   .prog-track { flex: 1; height: 8px; background: #0d1520; border-radius: 4px; cursor: pointer; position: relative; }
-  .prog-fill { height: 100%; background: #f97316; border-radius: 4px; width: 0%; transition: width 0.15s linear; }
+  .prog-fill { height: 100%; background: #0f9d58; border-radius: 4px; width: 0%; transition: width 0.15s linear; }
   .vol-area { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
   .vol-icon { font-size: 16px; cursor: pointer; color: #7a8a9a; transition: color 0.2s; }
-  .vol-icon:hover { color: #f97316; }
+  .vol-icon:hover { color: #0f9d58; }
   .vol-slider {
     width: 70px; height: 4px;
     -webkit-appearance: none; appearance: none;
@@ -87,7 +87,7 @@
   .vol-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 12px; height: 12px;
-    background: #f97316; border-radius: 50%;
+    background: #0f9d58; border-radius: 50%;
     cursor: pointer;
   }
   .tags { text-align: center; margin: 10px 0 20px; }
@@ -107,7 +107,7 @@
   .section:hover { border-color: rgba(59,130,246,0.25); }
   .section-number {
     display: inline-block;
-    background: #f97316;
+    background: #0f9d58;
     color: #fff;
     width: 28px; height: 28px;
     line-height: 28px;
@@ -118,7 +118,7 @@
     margin-right: 10px;
     vertical-align: middle;
   }
-  .section.opening .section-number { background: #f97316; }
+  .section.opening .section-number { background: #0f9d58; }
   .section.closing .section-number { background: #0F9D58; }
   .section-title { font-size: 16px; font-weight: 600; color: #fff; vertical-align: middle; }
   .section-tag {
@@ -147,20 +147,20 @@
 <body>
 <div class="container">
   <div class="header">
-    <h1>今日体育八大新闻</h1>
-    <div class="subtitle">1个数字 · 8条新闻 · 快速了解全球体育动态</div>
-    <div class="date">📅 2026年6月26日（星期五）</div>
+    <h1>今日机器人八大新闻</h1>
+    <div class="subtitle">1个数字 · 8条新闻 · 快速了解全球机器人动态</div>
+    <div class="date">📅 2026年6月28日（星期日）</div>
   </div>
   <div class="player">
     <div class="player-title">
-      🎙️ 今日体育八大新闻
+      🎙️ 今日机器人八大新闻
       <span class="playing-indicator" id="playingIndicator">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
         正在播放
       </span>
     </div>
     <audio id="audioPlayer" preload="auto">
-      <source src="sport_20260626.mp3" type="audio/mpeg">
+      <source src="robot_20260628.mp3" type="audio/mpeg">
     </audio>
     <div class="ctrl-row">
       <button class="play-btn" id="playBtn" title="播放 / 暂停">▶</button>
@@ -178,70 +178,69 @@
     </div>
   </div>
   <div class="tags">
-    <span>#体育</span>
+    <span>#机器人</span>
   </div>
   <div class="section opening">
     <span class="section-number">导</span>
     <span class="section-title">开场</span>
-    <p>大家好，欢迎收看今日体育科技速报，我是你们的主播。今天是2026年6月26日，星期五，今天全球sport领域有八条重磅新闻，我们用一个简单的数字，快速了解sport行业的最新动态。准备好，我们开始。</p>
+    <p>大家好，欢迎收看今日机器人科技速报，我是你们的主播。今天是2026年6月28日，星期日，今天机器人领域有八条重磅新闻，我们用一个简单的数字，快速了解机器人行业的最新动态。准备好，我们开始。</p>
   </div>
 
   <div class="section">
     <span class="section-number">1</span>
-    <span class="section-title">完整回放：FIFA世界杯FOX赛后节目与James Corden</span>
-    <span class="section-tag tag-hot">🔥 最重磅</span>
-    <p>完整回放：FIFA世界杯FOX赛后节目与James Corden。观看After Hours with James Corden分解最大的FIFA世界杯2026时刻。</p>
+    <span class="section-title">新浪机器人热点小时报丨2026年06月26日19时</span>
+    <span class="section-tag tag-trend">🤖 前沿</span>
+    <p>新浪看点. 新浪机器人热点小时报丨2026年06月26日19时\_今日实时机器人热点速递. 1、硅谷2.0巅峰对话落幕：锚定 AI、自动驾驶、人形机器人，解锁科技企业增长新路径. 来源：河北青年报 2026年6月20日至25日，由里斯战略咨询发起的硅谷2.0中美科技企业巅峰对话在硅谷圆满收官。本次对话集结英伟达、特斯拉、小鹏、杰克科技等中美头部科技企业代表，以及斯坦福大学、李飞飞实验室、英伟达科研</p>
   </div>
   <div class="section">
     <span class="section-number">2</span>
-    <span class="section-title">美国当局推迟伊朗国家队出发参加2026世界杯对阵埃及比赛</span>
-    <span class="section-tag tag-policy">🏛️ 政策</span>
-    <p>伊朗足协新闻发布会宣布推迟国家队出发参加2026世界杯对阵埃及比赛。</p>
+    <span class="section-title">[PDF] 人形机器人的2026：“1-10”时刻开启</span>
+    <span class="section-tag tag-trend">🤖 前沿</span>
+    <p>人形机器人的2026：“1-10”时刻开启 机械行业2026年度投资策略 2025年11月4日 姓名：孟鹏飞（分析师） 证书编号：S0790522060001 邮箱：mengpengfei@kysec.cn 证券研究报告 目录 CONTENTS 1 2026：海内外共振，人形机器人即将开启“1-10”时刻 2 特斯拉：关注V3量产时间线，聚焦“供应链确定性”和“技术升级” 3 国产机器人：资本化提</p>
   </div>
   <div class="section">
     <span class="section-number">3</span>
-    <span class="section-title">完整回放：比赛47 - K组：葡萄牙vs乌兹别克斯坦</span>
-    <span class="section-tag tag-policy">🏛️ 政策</span>
-    <p>完整回放：比赛47 - K组：葡萄牙vs乌兹别克斯坦。FIFA世界杯2026：比赛47，现场直播来自休斯顿体育场。</p>
+    <span class="section-title">人形机器人与具身智能标准化（HEIS）年会在京召开 - 中国电子学会</span>
+    <span class="section-tag tag-trend">🤖 前沿</span>
+    <p>[](https://www.cie.org.cn/list_42/15632.html)[](https://weibo.com/u/7778407074)[](https://www.toutiao.com/c/user/token/MS4wLjABAAAAWfJTXmvMc_Mx2mTydunrGc-HIN7-3JC5sWxqm0jWZnteZKKR0dzsSlHTI_ooh_aT/??ta</p>
   </div>
   <div class="section">
     <span class="section-number">4</span>
-    <span class="section-title">2025圣安东尼奥明星队阵容 - WNBA</span>
-    <span class="section-tag tag-business">💼 商业</span>
-    <p>2025圣安东尼奥明星队阵容 - WNBA。新闻、赛程、排名、阵容、统计数据。</p>
+    <span class="section-title">2026世界机器人大会-2026世界机器人大会</span>
+    <span class="section-tag tag-trend">🤖 前沿</span>
+    <p>央视《新闻联播》再度聚焦大会！百余新品发布，具身智能产业迭代加速. * 【WRC专家观点】德国奥尔登堡大学教授谢尔盖·法蒂科夫：《微机器人在精密制造与微电子行业的创新应用》 世界机器人大会服务平台 2025年09月19日 14:02 北京. * 【WRC专家观点】国际机器人联合会技术委员会主席亚历山大·维尔：《工业机器人拥抱数字孪生与人工智能（AI）技术》. * 【WRC专家观点】电子与电气工程师</p>
   </div>
   <div class="section">
     <span class="section-number">5</span>
-    <span class="section-title">捷克共和国vs墨西哥预测：捷克必须赢的比赛</span>
-    <span class="section-tag tag-policy">🏛️ 政策</span>
-    <p>FIFA世界杯2026：A组。捷克共和国vs墨西哥：预测2026年6月26日。</p>
+    <span class="section-title">2026年人形機器人市場看點？大摩：短期炒作會繼續 - Moomoo</span>
+    <span class="section-tag tag-trend">🤖 前沿</span>
+    <p>摩根士丹利最新報告認爲，2026年人形機器人市場熱度將持續，但需警惕炒作與規模化實用價值間的巨大差距。行業面臨技術開發難度和初創企業洗牌的回調風險，且</p>
   </div>
   <div class="section">
     <span class="section-number">6</span>
-    <span class="section-title">日本vs瑞典预览、投注、赔率和预测 | 6/25/2026</span>
-    <span class="section-tag tag-business">💼 商业</span>
-    <p>日本vs瑞典预览、投注、赔率和预测 | 6/25/2026。世界杯金球奖投注。</p>
+    <span class="section-title">机构：2026年人形机器人将迈向商用化关键年，全球出货量可望突破5万台|界面新闻 · 快讯</span>
+    <span class="section-tag tag-trend">🤖 前沿</span>
+    <p>历史搜索 全部删除;). 热门搜索. 机构：2026年人形机器人将迈向商用化关键年，全球出货量可望突破5万台. 12月9日，TrendForce集邦咨询预估，2026年将是人形机器人迈向商用化的关键年，全球出货量可望突破5万台，年增逾700%。. * 炸药盗墓、“黑吃黑”，最高检发布38人盗掘楚考烈王墓、倒卖文物、走私文物系列案. * 直通部委｜电诈案件发案连续8个月同比下降 全国查实涉“特供酒”</p>
   </div>
   <div class="section">
     <span class="section-number">7</span>
-    <span class="section-title">土耳其vs美国预览、投注、赔率和预测 | 6/25/2026</span>
-    <span class="section-tag tag-trend">📱 应用</span>
-    <p>土耳其vs美国预览、投注、赔率和预测 | 6/25/2026。世界杯金手套奖投注。</p>
+    <span class="section-title">2026年当人形机器人霸屏 普通人还有什么机会？ - 微言微语 - RFI - 法国国际广播电台</span>
+    <span class="section-tag tag-trend">🤖 前沿</span>
+    <p>2026年当人形机器人霸屏 普通人还有什么机会？. 今天，用网友@汪霞写在火马年除夕的一篇散文开篇，她在这篇题为《马蹄踏过六十年》的文章这样写道：丙午年的风，又转过来了。. 上一个丙午年，是一九六六。那年的桃花开得怎样，我们已记不清了，只知道接生的护士手臂上有块洗不净的墨迹，产房外走廊里标语的红，比血还艳。我们就这样来了，生在时代的惊堂木拍响的间隙里，第一声啼哭就混进了锣鼓与口号的风中。. 我们是</p>
   </div>
   <div class="section">
     <span class="section-number">8</span>
-    <span class="section-title">Daniel Muoz进球，哥伦比亚1-0险胜刚果晋级世界杯淘汰赛</span>
-    <span class="section-tag tag-trend">🚀 前沿</span>
-    <p>Daniel Muoz进球，哥伦比亚1-0险胜刚果晋级世界杯淘汰赛。</p>
+    <span class="section-title">馬斯克最新訪談2026年Optimus產量增10倍 - Yahoo新聞</span>
+    <span class="section-tag tag-trend">🤖 前沿</span>
+    <p>[NOWnews今日新聞] 根據《華爾街見聞》報導，特斯拉執行長馬斯克在最新連線訪談中表示，如果Optimus一切進展順利，2026年其人形機器人產量將增加10倍，</p>
   </div>
   <div class="section closing">
     <span class="section-number">结</span>
     <span class="section-title">总结</span>
-    <p>总结一下，今天的体育领域有几个关键词：完整回放：FIFA世界杯FOX赛后节目与James Corden、美国当局推迟伊朗国家队出发参加2026世界杯对阵埃及比赛、完整回放：比赛47 - K组：葡萄牙vs乌兹别克斯坦、2025圣安东尼奥明星队阵容 - WNBA、捷克共和国vs墨西哥预测：捷克必须赢的比赛、日本vs瑞典预览、投注、赔率和预测 | 6/25/2026、土耳其vs美国预览、投注、赔率和预测 | 6/25/2026、Daniel Muoz进球，哥伦比亚1-0险胜刚果晋级世界杯淘汰赛。体育正在重塑全球政治经济格局。这就是今天的体育科技速报，我们明天再见，拜拜！
+    <p>总结一下，今天的机器人领域有几个关键词：新浪机器人热点小时报丨2026年06月26日19时、[PDF] 人形机器人的2026：“1-10”时刻开启、人形机器人与具身智能标准化（HEIS）年会在京召开 - 中国电子学会、2026世界机器人大会-2026世界机器人大会、2026年人形機器人市場看點？大摩：短期炒作會繼續 - Moomoo、机构：2026年人形机器人将迈向商用化关键年，全球出货量可望突破5万台|界面新闻 · 快讯、2026年当人形机器人霸屏 普通人还有什么机会？ - 微言微语 - RFI - 法国国际广播电台、馬斯克最新訪談2026年Optimus產量增10倍 - Yahoo新聞。这就是今天的机器人科技速报，我们明天再见，拜拜！
   </div>
   <div class="footer">
-    数据来源：Washington Post · New York Post · Forbes · Reuters · PYMNTS · LatestLY · The National Law Review<br>
-    仅供学习参考，不构成任何投资或商业决策建议
+    数据来源：网络搜索结果 | 生成时间：2026年6月28日 星期日
   </div>
 </div>
 <script>
