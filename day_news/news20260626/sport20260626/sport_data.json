@@ -1,0 +1,71 @@
+{
+  "date": "2026-06-26",
+  "topic": "体育",
+  "news_count": 8,
+  "news": [
+    {
+      "rank": 1,
+      "title": "完整回放：FIFA世界杯FOX赛后节目与James Corden",
+      "tag": "hot",
+      "tag_label": "🔥 最重磅",
+      "tag_class": "tag-hot",
+      "content": "完整回放：FIFA世界杯FOX赛后节目与James Corden。观看After Hours with James Corden分解最大的FIFA世界杯2026时刻。"
+    },
+    {
+      "rank": 2,
+      "title": "美国当局推迟伊朗国家队出发参加2026世界杯对阵埃及比赛",
+      "tag": "policy",
+      "tag_label": "🏛️ 政策",
+      "tag_class": "tag-policy",
+      "content": "伊朗足协新闻发布会宣布推迟国家队出发参加2026世界杯对阵埃及比赛。"
+    },
+    {
+      "rank": 3,
+      "title": "完整回放：比赛47 - K组：葡萄牙vs乌兹别克斯坦",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "tag_class": "tag-business",
+      "content": "完整回放：比赛47 - K组：葡萄牙vs乌兹别克斯坦。FIFA世界杯2026：比赛47，现场直播来自休斯顿体育场。"
+    },
+    {
+      "rank": 4,
+      "title": "2025圣安东尼奥明星队阵容 - WNBA",
+      "tag": "trend",
+      "tag_label": "🚀 前沿",
+      "tag_class": "tag-trend",
+      "content": "2025圣安东尼奥明星队阵容 - WNBA。新闻、赛程、排名、阵容、统计数据。"
+    },
+    {
+      "rank": 5,
+      "title": "捷克共和国vs墨西哥预测：捷克必须赢的比赛",
+      "tag": "security",
+      "tag_label": "🛡️ 安全",
+      "tag_class": "tag-security",
+      "content": "FIFA世界杯2026：A组。捷克共和国vs墨西哥：预测2026年6月25日。"
+    },
+    {
+      "rank": 6,
+      "title": "日本vs瑞典预览、投注、赔率和预测 | 6/25/2026",
+      "tag": "trend",
+      "tag_label": "🚀 前沿",
+      "tag_class": "tag-trend",
+      "content": "日本vs瑞典预览、投注、赔率和预测 | 6/25/2026。世界杯金球奖投注。"
+    },
+    {
+      "rank": 7,
+      "title": "土耳其vs美国预览、投注、赔率和预测 | 6/25/2026",
+      "tag": "hot",
+      "tag_label": "🔥 最重磅",
+      "tag_class": "tag-hot",
+      "content": "土耳其vs美国预览、投注、赔率和预测 | 6/25/2026。世界杯金手套奖投注。"
+    },
+    {
+      "rank": 8,
+      "title": "Daniel Muoz进球，哥伦比亚1-0险胜刚果晋级世界杯淘汰赛",
+      "tag": "policy",
+      "tag_label": "🏛️ 政策",
+      "tag_class": "tag-policy",
+      "content": "Daniel Muoz进球，哥伦比亚1-0险胜刚果晋级世界杯淘汰赛。"
+    }
+  ]
+}

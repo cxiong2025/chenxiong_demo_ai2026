@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>无人驾驶日更 · 2026年6月28日（星期日）</title>
+<title>##AI日更 · 2026年6月26日（星期五）</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -38,14 +38,14 @@
     gap: 3px;
     margin-left: 10px;
     font-size: 12px;
-    color: #06b6d4;
+    color: #0f9d58;
     visibility: hidden;
   }
   .player-title .playing-indicator.active { visibility: visible; }
   .player-title .playing-indicator .bar {
     display: inline-block;
     width: 3px;
-    background: #06b6d4;
+    background: #0f9d58;
     border-radius: 1px;
     animation: soundBar 0.8s infinite ease-in-out;
   }
@@ -61,7 +61,7 @@
   .ctrl-row { display: flex; align-items: center; gap: 14px; }
   .play-btn {
     width: 26px; height: 26px;
-    background: #06b6d4;
+    background: #0f9d58;
     border: none; border-radius: 5px;
     color: #fff; font-size: 11px;
     cursor: pointer;
@@ -70,14 +70,14 @@
     transition: background 0.2s;
     line-height: 1;
   }
-  .play-btn:hover { background: #06b6d4; }
+  .play-btn:hover { background: #0f9d58; }
   .prog-area { flex: 1; display: flex; align-items: center; gap: 10px; }
   .time-el { font-size: 13px; color: #7a8a9a; white-space: nowrap; font-variant-numeric: tabular-nums; min-width: 38px; }
   .prog-track { flex: 1; height: 8px; background: #0d1520; border-radius: 4px; cursor: pointer; position: relative; }
-  .prog-fill { height: 100%; background: #06b6d4; border-radius: 4px; width: 0%; transition: width 0.15s linear; }
+  .prog-fill { height: 100%; background: #0f9d58; border-radius: 4px; width: 0%; transition: width 0.15s linear; }
   .vol-area { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
   .vol-icon { font-size: 16px; cursor: pointer; color: #7a8a9a; transition: color 0.2s; }
-  .vol-icon:hover { color: #06b6d4; }
+  .vol-icon:hover { color: #0f9d58; }
   .vol-slider {
     width: 70px; height: 4px;
     -webkit-appearance: none; appearance: none;
@@ -87,7 +87,7 @@
   .vol-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 12px; height: 12px;
-    background: #06b6d4; border-radius: 50%;
+    background: #0f9d58; border-radius: 50%;
     cursor: pointer;
   }
   .tags { text-align: center; margin: 10px 0 20px; }
@@ -107,7 +107,7 @@
   .section:hover { border-color: rgba(59,130,246,0.25); }
   .section-number {
     display: inline-block;
-    background: #06b6d4;
+    background: #0f9d58;
     color: #fff;
     width: 28px; height: 28px;
     line-height: 28px;
@@ -118,7 +118,7 @@
     margin-right: 10px;
     vertical-align: middle;
   }
-  .section.opening .section-number { background: #06b6d4; }
+  .section.opening .section-number { background: #0f9d58; }
   .section.closing .section-number { background: #0F9D58; }
   .section-title { font-size: 16px; font-weight: 600; color: #fff; vertical-align: middle; }
   .section-tag {
@@ -147,20 +147,20 @@
 <body>
 <div class="container">
   <div class="header">
-    <h1>今日无人驾驶八大新闻</h1>
-    <div class="subtitle">1个数字 · 8条新闻 · 快速了解全球无人驾驶动态</div>
-    <div class="date">📅 2026年6月28日（星期日）</div>
+    <h1>今日机器人八大新闻</h1>
+    <div class="subtitle">1个数字 · 8条新闻 · 快速了解全球机器人动态</div>
+    <div class="date">📅 2026年6月26日（星期五）</div>
   </div>
   <div class="player">
     <div class="player-title">
-      🎙️ 今日无人驾驶八大新闻
+      🎙️ 今日机器人八大新闻
       <span class="playing-indicator" id="playingIndicator">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
         正在播放
       </span>
     </div>
     <audio id="audioPlayer" preload="auto">
-      <source src="auto_20260628.mp3" type="audio/mpeg">
+      <source src="robot_20260626.mp3" type="audio/mpeg">
     </audio>
     <div class="ctrl-row">
       <button class="play-btn" id="playBtn" title="播放 / 暂停">▶</button>
@@ -178,69 +178,70 @@
     </div>
   </div>
   <div class="tags">
-    <span>#无人驾驶</span>
+    <span>#机器人</span>
   </div>
   <div class="section opening">
     <span class="section-number">导</span>
     <span class="section-title">开场</span>
-    <p>大家好，欢迎收看今日无人驾驶科技速报，我是你们的主播。今天是2026年6月28日，星期日，今天无人驾驶领域有八条重磅新闻，我们用一个简单的数字，快速了解无人驾驶行业的最新动态。准备好，我们开始。</p>
+    <p>大家好，欢迎收看今日机器人科技速报，我是你们的主播。今天是2026年6月26日，星期五，今天全球robot领域有八条重磅新闻，我们用一个简单的数字，快速了解robot行业的最新动态。准备好，我们开始。</p>
   </div>
 
   <div class="section">
     <span class="section-number">1</span>
-    <span class="section-title">新浪自动驾驶热点小时报丨2026年06月28日00时</span>
-    <span class="section-tag tag-trend">🚗 前沿</span>
-    <p>新浪汽车. 新浪自动驾驶热点小时报丨2026年06月28日00时\_今日实时自动驾驶热点速递. 1、40万以上轿车怎么挑？2026年新格局下，新势力碾压BBA？. 40万以上轿车优先选国产新能源新势力，传统BBA仅适合情怀党。2026年市场呈现“新势力领跑、BBA退守”格局，蔚来ET7(配置|询价))、极氪009、问界M9领衔的新能源车型在智能、空间、服务全面超越德系；宝马5系、奔驰E级(配置|询</p>
+    <span class="section-title">这家香港商店解雇了人类。现在由机器人运营</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>香港一家商店解雇了所有人类员工，完全由机器人运营。这是零售业自动化的重要里程碑。</p>
   </div>
   <div class="section">
     <span class="section-number">2</span>
-    <span class="section-title">新浪自动驾驶热点小时报丨2026年06月28日05时</span>
-    <span class="section-tag tag-trend">🚗 前沿</span>
-    <p>每日新闻摘录 · 1、英伟达联手比亚迪吉利等车企,以技术革新推动L4级自动驾驶加速落地 · 2、新规落地定调:告别L3无效内卷,L4才是自动驾驶商业化终局 · 3、全球</p>
+    <span class="section-title">从Fortnite到机器人：General Intuition融资23亿美元</span>
+    <span class="section-tag tag-policy">🏛️ 政策</span>
+    <p>General Intuition融资23亿美元，押注电子游戏可以训练AI代理进入现实世界。</p>
   </div>
   <div class="section">
     <span class="section-number">3</span>
-    <span class="section-title">何小鹏：2026 年底自动驾驶可以合法进入全球 - Moomoo</span>
-    <span class="section-tag tag-trend">🚗 前沿</span>
-    <p>何小鹏：2026 年底自动驾驶可以合法进入全球. 【TechWeb】6月26日消息，小鹏汽车 CEO 何小鹏今天在微博表示，VLA 2.0 走向全球进入确定模式。. 何小鹏透露，本周联合国 WP29 缔约国会议批准了 DCAS UNR 171 series 02（对应城区 NGP 功能法规）、UNR ADS（对应 L3-L5 自动驾驶法规） 两项法规。前者将在六个月后生效成为欧盟强制法规，也就是 </p>
+    <span class="section-title">Agility Robotics以25亿美元估值进军华尔街</span>
+    <span class="section-tag tag-policy">🏛️ 政策</span>
+    <p>Agility Robotics正在以25亿美元的估值进军华尔街，计划用人形机器人填充仓库。</p>
   </div>
   <div class="section">
     <span class="section-number">4</span>
-    <span class="section-title">自动驾驶：竞争对手紧逼之下，特斯拉会否为了保住行业地位而牺牲安全？ - BBC News 中文</span>
-    <span class="section-tag tag-trend">🚗 前沿</span>
-    <p>在自动驾驶的特斯拉上发短信是否很疯狂. 白发、戴眼镜的杰夫·珀尔曼（Geoff Perlman）坐在特斯拉的驾驶座上. 随着自动驾驶汽车接近成为现实，特斯拉（Tesla）正努力保持其在市场的领先地位，但它是否为了保住行业地位而牺牲了安全？. 过去几周，来自美国德州的61岁科技主管杰夫·珀尔曼（Geoff Perlman）在奥斯汀测试特斯拉最新自动驾驶软体的免费试用版。. 他印象深刻：系统能处理复杂</p>
+    <span class="section-title">中国电信业启动GSMA的IQ时代移动AI：MWC上海2026</span>
+    <span class="section-tag tag-business">💼 商业</span>
+    <p>世界移动通信大会上海2026开幕，GSMA的IQ时代移动AI愿景已经 underway。</p>
   </div>
   <div class="section">
     <span class="section-number">5</span>
-    <span class="section-title">何小鹏：2026年底自动驾驶可以合法进入全球 - 泰伯网</span>
-    <span class="section-tag tag-trend">🚗 前沿</span>
-    <p>企业服务 企业号 企业会员 产业加速器 活动营销云. 何小鹏：2026年底自动驾驶可以合法进入全球. 6月26日，小鹏集团CEO何小鹏发文称，VLA2.0走向全球进入确定模式，本周联合国WP29缔约国会议批准了：DCAS UNR 171 series 02（对应城区NGP功能法规）、UNR ADS （对应L3-L5自动驾驶法规）。何小鹏还称，DCAS 171 Series 02 在六个月后将生效成</p>
+    <span class="section-title">供应商看好5万亿美元人形机器人市场</span>
+    <span class="section-tag tag-policy">🏛️ 政策</span>
+    <p>供应商看好5万亿美元人形机器人市场，尽管存在价值捕获担忧。</p>
   </div>
   <div class="section">
     <span class="section-number">6</span>
-    <span class="section-title">我国牵头制定的联合国自动驾驶系统全球技术法规获批发布 - 中国工业报</span>
-    <span class="section-tag tag-trend">🚗 前沿</span>
-    <p>登录中国工业报新闻网. 找回密码. 2026年6月22—26日，联合国世界车辆法规协调组织（UN/WP.29）第199次全体会议在瑞士日内瓦召开。会上，由中国、欧盟、英国、美国、加拿大和日本共同牵头制定的联合国自动驾驶系统全球技术法规（ADSGTR）经全体缔约方投票表决，正式获批发布。. 近年来，自动驾驶技术加速迭代升级和产业化应用，世界主要国家和地区均将其作为汽车产业未来发展的战略制高点，纷纷出</p>
+    <span class="section-title">锂电池需求超越电动汽车：AI、核能和机器人将驱动72万吨需求至2050年</span>
+    <span class="section-tag tag-business">💼 商业</span>
+    <p>电动汽车将继续是锂电池需求的主要驱动力至少15年，但各种新兴技术——涵盖人工智能到下一代核能——到2050年将推动72万吨的需求。</p>
   </div>
   <div class="section">
     <span class="section-number">7</span>
-    <span class="section-title">国家最新定调！2026年加快突破高级别自动驾驶，扩大汽车消费</span>
-    <span class="section-tag tag-trend">🚗 前沿</span>
-    <p>首页 宏观 公司 金融 证券 全球 观点 汽车 新健康 人文 创投 智库 更多). 大湾区 一带一路 文旅 理财 投资通 21视频 直播 品牌活动. 国家最新定调！2026年加快突破高级别自动驾驶，扩大汽车消费. 2026年01月14日 12:46 21世纪经济报道 21财经APP 冉黎黎. 21世纪经济报道记者冉黎黎 北京报道 据“工信微报”2026年1月14日消息，1月13日下午，节能与新能源</p>
+    <span class="section-title">Seer Robotics亮相香港市场，称香港是具身AI门户</span>
+    <span class="section-tag tag-trend">📱 应用</span>
+    <p>总部位于上海的机器人制造商Seer Robotics以提供机器人大脑而闻名，在香港市场首次亮相。</p>
   </div>
   <div class="section">
     <span class="section-number">8</span>
-    <span class="section-title">特斯拉首辆全自动驾驶汽车将交付，其Robotaxi暂定本月开启载客</span>
-    <span class="section-tag tag-trend">🚗 前沿</span>
-    <p>要闻 金融 评论 产经 创投 滚动. A股 公司 新股 基金 港美股. 京 津 冀 晋 蒙 辽 吉 黑 沪 苏 浙 皖 闽 赣 鲁 豫 鄂 湘 粤 桂 琼 渝 川 黔 滇 藏 陕 甘 青 宁 新 鹏. 来源：界面新闻作者：宋佳楠2025-06-11 10:27. 当地时间6月11日，特斯拉CEO埃隆·马斯克表示，公司即将在美国德州奥斯汀交付首辆全自动驾驶汽车，同时推动Robotaxi服务试运营。.</p>
+    <span class="section-title">Waymo转向加拿大车队管理器Element监督部分robotaxi车队</span>
+    <span class="section-tag tag-trend">🚀 前沿</span>
+    <p>Waymo转向加拿大车队管理器Element监督部分robotaxi车队。</p>
   </div>
   <div class="section closing">
     <span class="section-number">结</span>
     <span class="section-title">总结</span>
-    <p>总结一下，今天的无人驾驶领域有几个关键词：新浪自动驾驶热点小时报丨2026年06月28日00时、新浪自动驾驶热点小时报丨2026年06月28日05时、何小鹏：2026 年底自动驾驶可以合法进入全球 - Moomoo、自动驾驶：竞争对手紧逼之下，特斯拉会否为了保住行业地位而牺牲安全？ - BBC News 中文、何小鹏：2026年底自动驾驶可以合法进入全球 - 泰伯网、我国牵头制定的联合国自动驾驶系统全球技术法规获批发布 - 中国工业报、国家最新定调！2026年加快突破高级别自动驾驶，扩大汽车消费、特斯拉首辆全自动驾驶汽车将交付，其Robotaxi暂定本月开启载客。这就是今天的无人驾驶科技速报，我们明天再见，拜拜！
+    <p>总结一下，今天的机器人领域有几个关键词：这家香港商店解雇了人类。现在由机器人运营、从Fortnite到机器人：General Intuition融资23亿美元、Agility Robotics以25亿美元估值进军华尔街、中国电信业启动GSMA的IQ时代移动AI：MWC上海2026、供应商看好5万亿美元人形机器人市场、锂电池需求超越电动汽车：AI、核能和机器人将驱动72万吨需求至2050年、Seer Robotics亮相香港市场，称香港是具身AI门户、Waymo转向加拿大车队管理器Element监督部分robotaxi车队。机器人正在重塑全球政治经济格局。这就是今天的机器人科技速报，我们明天再见，拜拜！
   </div>
   <div class="footer">
-    数据来源：网络搜索结果 | 生成时间：2026年6月28日 星期日
+    数据来源：Washington Post · New York Post · Forbes · Reuters · PYMNTS · LatestLY · The National Law Review<br>
+    仅供学习参考，不构成任何投资或商业决策建议
   </div>
 </div>
 <script>

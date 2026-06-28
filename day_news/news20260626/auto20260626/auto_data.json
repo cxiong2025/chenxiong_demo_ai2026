@@ -1,0 +1,71 @@
+{
+  "date": "2026-06-26",
+  "topic": "无人驾驶",
+  "news_count": 8,
+  "news": [
+    {
+      "rank": 1,
+      "title": "孩子们坐在窗户边看Waymo在西區行驶。目击者报警；车未停",
+      "tag": "hot",
+      "tag_label": "🔥 最重磅",
+      "tag_class": "tag-hot",
+      "content": "一位圣莫尼卡居民说，三个男孩在白色Waymo的开窗窗台上自拍，当它从圣莫尼卡驶向西洛杉矶时。"
+    },
+    {
+      "rank": 2,
+      "title": "Waymo转向加拿大车队管理器Element监督部分robotaxi车队",
+      "tag": "policy",
+      "tag_label": "🏛️ 政策",
+      "tag_class": "tag-policy",
+      "content": "Waymo转向加拿大车队管理器Element监督部分robotaxi车队。"
+    },
+    {
+      "rank": 3,
+      "title": "联合国通过首批全球自动驾驶汽车规则",
+      "tag": "business",
+      "tag_label": "💼 商业",
+      "tag_class": "tag-business",
+      "content": "首批全球自动驾驶汽车规则已于周三由联合国机构通过，建立了完全自动驾驶汽车的监管框架。"
+    },
+    {
+      "rank": 4,
+      "title": "亚马逊Zoox展示其新烤面包机轮子",
+      "tag": "trend",
+      "tag_label": "🚀 前沿",
+      "tag_class": "tag-trend",
+      "content": "Zoox，亚马逊的robotaxi公司，刚刚发布了其自动驾驶乘车的最新版本。公司表示，最新型号是其演进。"
+    },
+    {
+      "rank": 5,
+      "title": "日产将软件开发时间从数月缩短至数小时，追赶中国SDV",
+      "tag": "security",
+      "tag_label": "🛡️ 安全",
+      "tag_class": "tag-security",
+      "content": "日产将软件开发时间从数月缩短至数小时，追赶中国SDV。"
+    },
+    {
+      "rank": 6,
+      "title": "Katy特斯拉悲剧引发新问题，马斯克反击自动驾驶声明",
+      "tag": "trend",
+      "tag_label": "🚀 前沿",
+      "tag_class": "tag-trend",
+      "content": "德克萨斯州Katy的一起致命车祸现在成为全国范围内关于车辆自动化、驾驶员责任和自动驾驶未来的更大辩论的核心。"
+    },
+    {
+      "rank": 7,
+      "title": "芬兰采用自动驾驶电动穿梭车用于公共交通",
+      "tag": "hot",
+      "tag_label": "🔥 最重磅",
+      "tag_class": "tag-hot",
+      "content": "芬兰坦佩雷市将其自治电动穿梭车引入常规scheduled服务。"
+    },
+    {
+      "rank": 8,
+      "title": "Zoox升级其robotaxi，准备商业化服务",
+      "tag": "policy",
+      "tag_label": "🏛️ 政策",
+      "tag_class": "tag-policy",
+      "content": "Zoox升级其robotaxi，准备商业化服务。"
+    }
+  ]
+}
