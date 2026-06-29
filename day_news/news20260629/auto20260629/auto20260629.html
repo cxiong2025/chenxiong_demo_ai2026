@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>##AI日更 · 2026年6月29日（星期一）</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: #0c1220;
+    color: #d8e0e8;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container { max-width: 740px; margin: 0 auto; }
+  .header { text-align: center; padding: 30px 0 20px; }
+  .header h1 { font-size: 28px; color: #fff; margin-bottom: 8px; }
+  .header .subtitle { color: #7a8a9a; font-size: 14px; }
+  .header .date { color: #7a8a9a; font-size: 13px; margin-top: 4px; }
+  .player {
+    background: #19273a;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 20px 0;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  }
+  .player-title {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .player-title .playing-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    margin-left: 10px;
+    font-size: 12px;
+    color: #06b6d4;
+    visibility: hidden;
+  }
+  .player-title .playing-indicator.active { visibility: visible; }
+  .player-title .playing-indicator .bar {
+    display: inline-block;
+    width: 3px;
+    background: #06b6d4;
+    border-radius: 1px;
+    animation: soundBar 0.8s infinite ease-in-out;
+  }
+  .player-title .playing-indicator .bar:nth-child(1) { height: 10px; animation-delay: 0s; }
+  .player-title .playing-indicator .bar:nth-child(2) { height: 14px; animation-delay: 0.15s; }
+  .player-title .playing-indicator .bar:nth-child(3) { height: 8px; animation-delay: 0.3s; }
+  .player-title .playing-indicator .bar:nth-child(4) { height: 12px; animation-delay: 0.45s; }
+  .player-title .playing-indicator .bar:nth-child(5) { height: 6px; animation-delay: 0.6s; }
+  @keyframes soundBar {
+    0%, 100% { transform: scaleY(0.4); }
+    50% { transform: scaleY(1); }
+  }
+  .ctrl-row { display: flex; align-items: center; gap: 14px; }
+  .play-btn {
+    width: 26px; height: 26px;
+    background: #06b6d4;
+    border: none; border-radius: 5px;
+    color: #fff; font-size: 11px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s;
+    line-height: 1;
+  }
+  .play-btn:hover { background: #06b6d4; }
+  .prog-area { flex: 1; display: flex; align-items: center; gap: 10px; }
+  .time-el { font-size: 13px; color: #7a8a9a; white-space: nowrap; font-variant-numeric: tabular-nums; min-width: 38px; }
+  .prog-track { flex: 1; height: 8px; background: #0d1520; border-radius: 4px; cursor: pointer; position: relative; }
+  .prog-fill { height: 100%; background: #06b6d4; border-radius: 4px; width: 0%; transition: width 0.15s linear; }
+  .vol-area { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+  .vol-icon { font-size: 16px; cursor: pointer; color: #7a8a9a; transition: color 0.2s; }
+  .vol-icon:hover { color: #06b6d4; }
+  .vol-slider {
+    width: 70px; height: 4px;
+    -webkit-appearance: none; appearance: none;
+    background: #0d1520; border-radius: 2px;
+    outline: none; cursor: pointer;
+  }
+  .vol-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px; height: 12px;
+    background: #06b6d4; border-radius: 50%;
+    cursor: pointer;
+  }
+  .tags { text-align: center; margin: 10px 0 20px; }
+  .tags span {
+    display: inline-block; background: #152232; color: #7a8a9a;
+    padding: 4px 12px; border-radius: 20px; font-size: 12px;
+    margin: 4px; border: 1px solid rgba(255,255,255,0.06);
+  }
+  .section {
+    background: #152232;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 16px 0;
+    border: 1px solid rgba(255,255,255,0.04);
+    transition: border-color 0.3s;
+  }
+  .section:hover { border-color: rgba(59,130,246,0.25); }
+  .section-number {
+    display: inline-block;
+    background: #06b6d4;
+    color: #fff;
+    width: 28px; height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .section.opening .section-number { background: #06b6d4; }
+  .section.closing .section-number { background: #0F9D58; }
+  .section-title { font-size: 16px; font-weight: 600; color: #fff; vertical-align: middle; }
+  .section-tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  .tag-hot { background: #dc2626; color: #fff; }
+  .tag-trend { background: #0F9D58; color: #fff; }
+  .tag-business { background: #7c3aed; color: #fff; }
+  .tag-policy { background: #F59E0B; color: #fff; }
+  .tag-security { background: #0ea5e9; color: #fff; }
+  .section p {
+    margin-top: 12px;
+    line-height: 1.8;
+    font-size: 15px;
+    color: #b0bec5;
+    text-align: justify;
+  }
+  .footer { text-align: center; padding: 30px 0; color: #4a5568; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>今日无人驾驶八大新闻</h1>
+    <div class="subtitle">1个数字 · 8条新闻 · 快速了解全球无人驾驶动态</div>
+    <div class="date">📅 2026年6月29日（星期一）</div>
+  </div>
+  <div class="player">
+    <div class="player-title">
+      🎙️ 今日无人驾驶八大新闻
+      <span class="playing-indicator" id="playingIndicator">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        正在播放
+      </span>
+    </div>
+    <audio id="audioPlayer" preload="auto">
+      <source src="auto_20260629.mp3" type="audio/mpeg">
+    </audio>
+    <div class="ctrl-row">
+      <button class="play-btn" id="playBtn" title="播放 / 暂停">▶</button>
+      <div class="prog-area">
+        <span class="time-el" id="curTime">00:00</span>
+        <div class="prog-track" id="progTrack">
+          <div class="prog-fill" id="progFill"></div>
+        </div>
+        <span class="time-el" id="totTime">00:00</span>
+      </div>
+      <div class="vol-area">
+        <span class="vol-icon" id="volIcon" title="静音/恢复">🔊</span>
+        <input type="range" class="vol-slider" id="volSlider" min="0" max="100" value="80">
+      </div>
+    </div>
+  </div>
+  <div class="tags">
+    <span>#无人驾驶</span>
+  </div>
+  <div class="section opening">
+    <span class="section-number">导</span>
+    <span class="section-title">开场</span>
+    <p>大家好，欢迎收看今日无人驾驶科技速报，我是你们的主播。今天是2026年6月29日，星期一，今天全球auto领域有八条重磅新闻，我们用一个简单的数字，快速了解auto行业的最新动态。准备好，我们开始。</p>
+  </div>
+
+  <div class="section">
+    <span class="section-number">1</span>
+    <span class="section-title">TaskUs调查显示消费者对自动驾驶汽车的信任受地理位置影响</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>TaskUs公司发布了2026年自动驾驶汽车消费者信任调查报告，显示消费者对自动驾驶汽车的信任程度深受地理位置和人口统计特征的影响。调查覆盖了超过1000名美国消费者，其中38%的美国消费者表示愿意尝试robotaxi服务。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">2</span>
+    <span class="section-title">大众汽车计划终止与博世的合作，转向自主开发自动驾驶技术</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>据路透社报道，大众汽车计划终止与博世的自动驾驶技术合作项目，转而自行开发相关技术。这一决定反映了汽车制造商对自动驾驶技术自主权的重视。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">3</span>
+    <span class="section-title">Waymo成立德国分公司，为欧洲扩张做准备</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>Waymo成立了德国分公司，为可能的欧洲扩张做准备。该公司的业务范围涵盖了自动驾驶技术的开发和商业化应用，显示出其在全球市场的雄心。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">4</span>
+    <span class="section-title">Tesla面临得克萨斯州致命车祸审查，监管机构展开调查</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>Tesla因得克萨斯州一起致命车祸面临审查，监管机构已展开调查。这一事件引发了对自动驾驶技术安全性的进一步讨论。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">5</span>
+    <span class="section-title">AI和机器人将如何变革汽车制造业</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>AI和机器人技术正在彻底改变汽车制造业。从生产线自动化到质量控制，AI技术的应用正在提高效率和产品质量，同时也改变了工人的角色和技能需求。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">6</span>
+    <span class="section-title">AI主导芯片供应：谁赢谁输？</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>随着AI技术对芯片需求的激增，芯片供应链正经历重大变革。本文分析了AI主导芯片供应背景下，各行业和企业面临的机遇和挑战。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">7</span>
+    <span class="section-title">XPENG VLA 2.0和MONA L03准备进入全球市场</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>小鹏汽车宣布其VLA 2.0和MONA L03车型准备进入全球市场。这些车型采用了最新的AI和机器人技术，代表了新能源汽车的未来发展方向。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">8</span>
+    <span class="section-title">中国警告欧盟贸易关系可能冻结，布鲁塞尔会议在即</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>中国警告欧盟，如果贸易谈判不顺利，双边贸易关系可能冻结。这一警告发生在布鲁塞尔重要贸易会议即将召开之际。</p>
+  </div>
+  <div class="section closing">
+    <span class="section-number">结</span>
+    <span class="section-title">总结</span>
+    <p>总结一下，今天的无人驾驶领域有几个关键词：TaskUs调查显示消费者对自动驾驶汽车的信任受地理位置影响、大众汽车计划终止与博世的合作，转向自主开发自动驾驶技术、Waymo成立德国分公司，为欧洲扩张做准备、Tesla面临得克萨斯州致命车祸审查，监管机构展开调查、AI和机器人将如何变革汽车制造业、AI主导芯片供应：谁赢谁输？、XPENG VLA 2.0和MONA L03准备进入全球市场、中国警告欧盟贸易关系可能冻结，布鲁塞尔会议在即。无人驾驶正在重塑全球行业格局。这就是今天的无人驾驶科技速报，我们明天再见，拜拜！</p></div>
+  <div class="footer">
+    数据来源：Reuters · New York Post · Forbes · Reuters · PYMNTS · LatestLY · The National Law Review<br>
+    仅供学习参考，不构成任何投资或商业决策建议
+  </div>
+</div>
+<script>
+  var audio = document.getElementById('audioPlayer');
+  var playBtn = document.getElementById('playBtn');
+  var progFill = document.getElementById('progFill');
+  var progTrack = document.getElementById('progTrack');
+  var curTimeEl = document.getElementById('curTime');
+  var totTimeEl = document.getElementById('totTime');
+  var playingIndicator = document.getElementById('playingIndicator');
+  var volSlider = document.getElementById('volSlider');
+  var volIcon = document.getElementById('volIcon');
+  audio.volume = 0.8;
+  function fmt(sec) {
+    var m = Math.floor(sec / 60);
+    var s = Math.floor(sec % 60);
+    return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+  }
+  audio.addEventListener('loadedmetadata', function() {
+    totTimeEl.textContent = fmt(audio.duration);
+  });
+  audio.addEventListener('timeupdate', function() {
+    if (audio.duration) {
+      progFill.style.width = (audio.currentTime / audio.duration * 100) + '%';
+      curTimeEl.textContent = fmt(audio.currentTime);
+    }
+  });
+  audio.addEventListener('ended', function() {
+    playBtn.textContent = '▶';
+    playingIndicator.classList.remove('active');
+    progFill.style.width = '100%';
+  });
+  playBtn.addEventListener('click', function() {
+    if (audio.paused) {
+      audio.play();
+      playBtn.textContent = '⏸';
+      playingIndicator.classList.add('active');
+    } else {
+      audio.pause();
+      playBtn.textContent = '▶';
+      playingIndicator.classList.remove('active');
+    }
+  });
+  progTrack.addEventListener('click', function(e) {
+    var rect = progTrack.getBoundingClientRect();
+    audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
+  });
+  volSlider.addEventListener('input', function() {
+    audio.volume = this.value / 100;
+    if (this.value == 0) volIcon.textContent = '🔇';
+    else if (this.value < 50) volIcon.textContent = '🔉';
+    else volIcon.textContent = '🔊';
+  });
+  volIcon.addEventListener('click', function() {
+    if (audio.volume > 0) {
+      audio.volume = 0;
+      volSlider.value = 0;
+      volIcon.textContent = '🔇';
+    } else {
+      audio.volume = 0.8;
+      volSlider.value = 80;
+      volIcon.textContent = '🔊';
+    }
+  });
+</script>
+</body>
+</html>

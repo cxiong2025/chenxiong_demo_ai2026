@@ -1,0 +1,50 @@
+[
+  {
+    "title": "TaskUs调查显示消费者对自动驾驶汽车的信任受地理位置影响",
+    "abstract": "TaskUs公司发布了2026年自动驾驶汽车消费者信任调查报告，显示消费者对自动驾驶汽车的信任程度深受地理位置和人口统计特征的影响。调查覆盖了超过1000名美国消费者，其中38%的美国消费者表示愿意尝试robotaxi服务。",
+    "source": "autoconnectedcar.com",
+    "url": "https://www.autoconnectedcar.com"
+  },
+  {
+    "title": "大众汽车计划终止与博世的合作，转向自主开发自动驾驶技术",
+    "abstract": "据路透社报道，大众汽车计划终止与博世的自动驾驶技术合作项目，转而自行开发相关技术。这一决定反映了汽车制造商对自动驾驶技术自主权的重视。",
+    "source": "Automotive News",
+    "url": "https://europe.autonews.com"
+  },
+  {
+    "title": "Waymo成立德国分公司，为欧洲扩张做准备",
+    "abstract": "Waymo成立了德国分公司，为可能的欧洲扩张做准备。该公司的业务范围涵盖了自动驾驶技术的开发和商业化应用，显示出其在全球市场的雄心。",
+    "source": "just-auto.com",
+    "url": "https://www.just-auto.com"
+  },
+  {
+    "title": "Tesla面临得克萨斯州致命车祸审查，监管机构展开调查",
+    "abstract": "Tesla因得克萨斯州一起致命车祸面临审查，监管机构已展开调查。这一事件引发了对自动驾驶技术安全性的进一步讨论。",
+    "source": "mezha.net",
+    "url": "https://mezha.net"
+  },
+  {
+    "title": "AI和机器人将如何变革汽车制造业",
+    "abstract": "AI和机器人技术正在彻底改变汽车制造业。从生产线自动化到质量控制，AI技术的应用正在提高效率和产品质量，同时也改变了工人的角色和技能需求。",
+    "source": "Automotive News",
+    "url": "https://www.autonews.com"
+  },
+  {
+    "title": "AI主导芯片供应：谁赢谁输？",
+    "abstract": "随着AI技术对芯片需求的激增，芯片供应链正经历重大变革。本文分析了AI主导芯片供应背景下，各行业和企业面临的机遇和挑战。",
+    "source": "Automotive News",
+    "url": "https://www.autonews.com"
+  },
+  {
+    "title": "XPENG VLA 2.0和MONA L03准备进入全球市场",
+    "abstract": "小鹏汽车宣布其VLA 2.0和MONA L03车型准备进入全球市场。这些车型采用了最新的AI和机器人技术，代表了新能源汽车的未来发展方向。",
+    "source": "CleanTechnica",
+    "url": "https://cleantechnica.com"
+  },
+  {
+    "title": "中国警告欧盟贸易关系可能冻结，布鲁塞尔会议在即",
+    "abstract": "中国警告欧盟，如果贸易谈判不顺利，双边贸易关系可能冻结。这一警告发生在布鲁塞尔重要贸易会议即将召开之际。",
+    "source": "Automotive News",
+    "url": "https://www.autonews.com"
+  }
+]
