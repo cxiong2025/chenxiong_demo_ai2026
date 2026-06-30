@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日新闻聚合 · 2026年6月30日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif; background: #0c1220; color: #d8e0e8; min-height: 100vh; padding: 20px; }
+  .container { max-width: 760px; margin: 0 auto; }
+  .header { text-align: center; padding: 36px 0 32px; }
+  .header h1 { font-size: 30px; color: #fff; margin-bottom: 8px; }
+  .header .subtitle { color: #7a8a9a; font-size: 14px; }
+  .header .date { color: #4a5568; font-size: 13px; margin-top: 6px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .card { background: #152232; border-radius: 16px; padding: 28px 26px; border: 1px solid rgba(255,255,255,0.04); transition: border-color 0.3s, transform 0.2s, box-shadow 0.3s; cursor: pointer; text-decoration: none; display: block; }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,0.3); }
+  .card[data-theme="ai"] { --accent: #3b82f6; }
+  .card[data-theme="sport"] { --accent: #f97316; }
+  .card[data-theme="ent"] { --accent: #a78bfa; }
+  .card[data-theme="robot"] { --accent: #0f9d58; }
+  .card[data-theme="auto"] { --accent: #06b6d4; }
+  .card:hover { border-color: var(--accent); }
+  .card-icon { font-size: 32px; margin-bottom: 12px; }
+  .card-title { font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+  .card-topic { font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+  .card-desc { font-size: 13px; color: #7a8a9a; line-height: 1.6; }
+  .card-date { display: inline-block; margin-top: 14px; font-size: 11px; color: #4a5568; background: #0d1520; padding: 3px 10px; border-radius: 12px; }
+  .card-arrow { display: block; text-align: right; margin-top: 12px; font-size: 16px; opacity: 0; transition: opacity 0.2s; }
+  .card:hover .card-arrow { opacity: 1; }
+  .footer { text-align: center; padding: 36px 0; color: #4a5568; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📰 每日新闻聚合</h1>
+    <div class="subtitle">选择板块，快速进入对应新闻页面 · 每个板块8条新闻</div>
+    <div class="date">2026年6月30日 · 星期二 · 共40条新闻</div>
+  </div>
+  <div class="grid">
+    <a class="card" data-theme="ai" href="ai20260630/ai20260630.html">
+      <div class="card-icon">🤖</div>
+      <div class="card-title">AI</div>
+      <div class="card-topic" style="color: #3b82f6">AI</div>
+      <div class="card-desc">OpenAI推迟GPT-5.6发布，美国寻求AI模型早期访问、GPT-5.6 Sol和Terra预览版发布：OpenAI合作伙伴专属、Anthropic Claude Opus 4.8和Sonnet 4.6全面开放、GPT-5.5-Cyber网络安全版仅限可信访问、Google Gemini 2.5 Pro Deep Think能力全面上线、美国众议院能源委员会举行AI政策听证会、印度AI概念股上涨，Motilal Oswa中盘基金回报率达22.88%、AI模型监管进入新阶段：能力、安全与平台控制并重</div>
+      <span class="card-date">2026年6月30日</span>
+      <span class="card-arrow" style="color: #3b82f6">→</span>
+    </a>
+    <a class="card" data-theme="robot" href="robot20260630/robot20260630.html">
+      <div class="card-icon">🔧</div>
+      <div class="card-title">机器人</div>
+      <div class="card-topic" style="color: #0f9d58">机器人</div>
+      <div class="card-desc">1X NEO对阵Unitree：西方能否赢得人形机器人竞赛？、2026人形机器人市场报告发布：198页独家洞察、UK初创公司展示Destiny人形机器人，专注工业任务、美国众议院能源委员会讨论AI与机器人政策、全球人形机器人供应链重构加速、人形机器人技术挑战与突破并存、2026年人形机器人融资趋势分析、Destiny机器人展示工业应用潜力</div>
+      <span class="card-date">2026年6月30日</span>
+      <span class="card-arrow" style="color: #0f9d58">→</span>
+    </a>
+    <a class="card" data-theme="ent" href="ent20260630/ent20260630.html">
+      <div class="card-icon">🎬</div>
+      <div class="card-title">娱乐</div>
+      <div class="card-topic" style="color: #a78bfa">娱乐</div>
+      <div class="card-desc">美国筹备独立250周年全国庆祝活动、欧洲热浪导致超额死亡人数上升、美伊冲突正式结束，中东局势迎来新转机、最高法院裁定Fed的Lisa Cook可保留职位、瑞典对阵法国：世界杯激战正酣、德国对阵巴拉圭：世界杯关键战役、荷兰对阵摩洛哥：世界杯小组赛白热化、夏季足球盛宴：世界杯小组赛进入关键阶段</div>
+      <span class="card-date">2026年6月30日</span>
+      <span class="card-arrow" style="color: #a78bfa">→</span>
+    </a>
+    <a class="card" data-theme="sport" href="sport20260630/sport20260630.html">
+      <div class="card-icon">⚽</div>
+      <div class="card-title">体育</div>
+      <div class="card-topic" style="color: #f97316">体育</div>
+      <div class="card-desc">世界杯6月30日赛程：瑞典对阵法国、德国对阵巴拉圭：世界杯关键战役、荷兰对阵摩洛哥：小组赛白热化、MLB 6月30日电视转播赛程、世界杯夏季足球盛宴精彩纷呈、瑞典队主场迎战法国队、世界杯小组赛出线形势分析、世界杯球迷热情高涨</div>
+      <span class="card-date">2026年6月30日</span>
+      <span class="card-arrow" style="color: #f97316">→</span>
+    </a>
+    <a class="card" data-theme="auto" href="auto20260630/auto20260630.html">
+      <div class="card-icon">🚗</div>
+      <div class="card-title">无人驾驶</div>
+      <div class="card-topic" style="color: #06b6d4">无人驾驶</div>
+      <div class="card-desc">特斯拉Robotaxi交付目标落空，6月30日零运营、特斯拉股价下跌：Robotaxi、FSD风险与资本支出压力、Waymo奥斯汀运营超250辆Robotaxi，远超特斯拉、Polymarket预测特斯拉加州Robotaxi服务最终结果、Waymo与Uber在凤凰城悄然分手、特斯拉Robotaxi延期引发投资者担忧、Waymo在德克萨斯州扩张加速、自动驾驶行业格局重塑：Waymo领先特斯拉</div>
+      <span class="card-date">2026年6月30日</span>
+      <span class="card-arrow" style="color: #06b6d4">→</span>
+    </a>
+</div>
+  <div class="footer">
+    每日新闻聚合系统 · 点击卡片即可跳转<br>
+    数据来源：各板块独立标注 · 仅供学习参考
+  </div>
+</div>
+</body>
+</html>

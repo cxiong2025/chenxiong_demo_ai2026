@@ -1,0 +1,19 @@
+大家好，欢迎收看今日AI科技速报，我是你们的主播。今天是2026年6月30日，星期二，今天全球AI领域有八条重磅新闻，我们用一个简单的数字，快速了解AI行业的最新动态。准备好，我们开始。
+第1条：OpenAI推迟GPT-5.6发布，美国寻求AI模型早期访问
+  市场分析显示，GPT-5.6于6月30日发布的可能性降至0.7%，而7月31日发布的概率高达88.5%。与此同时，美国政府正寻求对前沿AI模型的早期访问权限，包括Claude Opus 4.8、Sonnet 4.6等先进模型。这一政策动向引发了关于AI安全监管的广泛讨论。
+第2条：GPT-5.6 Sol和Terra预览版发布：OpenAI合作伙伴专属
+  OpenAI向合作伙伴发布了GPT-5.6系列的Sol和Terra预览版。分析认为，这标志着前沿AI模型时代进入新阶段，能力、国家安全、企业信任和平台控制成为核心竞争力。GPT-5.6的发布不仅是技术突破，更是监管框架重塑的信号。
+第3条：Anthropic Claude Opus 4.8和Sonnet 4.6全面开放
+  截至6月30日，Anthropic的Claude Opus 4.8和Sonnet 4.6已通过API和订阅服务全面开放。与此同时，OpenAI的GPT-5.5也已全面可用，Google的Gemini 2.5 Pro with Deep Think则在Gemini API、AI Studio和Vertex AI上可用。AI模型竞争进入白热化阶段。
+第4条：GPT-5.5-Cyber网络安全版仅限可信访问
+  OpenAI推出的GPT-5.5-Cyber版本目前仅向经过验证的可信用户开放访问。这一限制反映了AI模型在网络安全领域的应用正受到越来越严格的监管。企业需要申请资质才能获得使用权限，以确保AI技术在敏感领域的安全应用。
+第5条：Google Gemini 2.5 Pro Deep Think能力全面上线
+  Google的Gemini 2.5 Pro with Deep Think功能现已通过Gemini API、AI Studio和Vertex AI全面开放。这一模型在深度推理和多模态任务方面表现出色，为企业和研究机构提供了强大的AI工具。Gemini系列的持续升级彰显了Google在AI领域的领先地位。
+第6条：美国众议院能源委员会举行AI政策听证会
+  2026年6月30日晚，美国众议院能源和商业委员会举行了一场关于AI政策的听证会。Abundance研究所AI政策负责人Neil Chilson和首席律师Jason Fiorillo等专家出席作证，讨论了AI监管、安全和未来发展等重大议题。
+第7条：印度AI概念股上涨，Motilal Oswa中盘基金回报率达22.88%
+  印度股市中，AI相关概念股表现强劲。Motilal Oswa中盘基金5年回报率高达22.88%，吸引了大量投资者关注。印度政府也在积极推动AI产业发展，预计未来几年将成为全球AI市场的重要参与者。
+第8条：AI模型监管进入新阶段：能力、安全与平台控制并重
+  随着GPT-5.6等前沿模型的陆续发布，AI监管框架正在经历深刻变革。分析指出，未来AI发展将更加注重能力评估、国家安全保障、企业信任建设和平台生态控制。这一趋势将对全球AI产业格局产生深远影响。
+
+总结一下，今天的AI领域有几个关键词：OpenAI推迟GPT-5.6发布，美国寻求AI模型早期访问、GPT-5.6 Sol和Terra预览版发布：OpenAI合作伙伴专属、Anthropic Claude Opus 4.8和Sonnet 4.6全面开放、GPT-5.5-Cyber网络安全版仅限可信访问、Google Gemini 2.5 Pro Deep Think能力全面上线、美国众议院能源委员会举行AI政策听证会、印度AI概念股上涨，Motilal Oswa中盘基金回报率达22.88%、AI模型监管进入新阶段：能力、安全与平台控制并重。AI正在重塑全球行业格局。这就是今天的AI科技速报，我们明天再见，拜拜！
