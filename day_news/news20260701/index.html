@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日新闻聚合 · 2026年7月1日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif; background: #0c1220; color: #d8e0e8; min-height: 100vh; padding: 20px; }
+  .container { max-width: 760px; margin: 0 auto; }
+  .header { text-align: center; padding: 36px 0 32px; }
+  .header h1 { font-size: 30px; color: #fff; margin-bottom: 8px; }
+  .header .subtitle { color: #7a8a9a; font-size: 14px; }
+  .header .date { color: #4a5568; font-size: 13px; margin-top: 6px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .card { background: #152232; border-radius: 16px; padding: 28px 26px; border: 1px solid rgba(255,255,255,0.04); transition: border-color 0.3s, transform 0.2s, box-shadow 0.3s; cursor: pointer; text-decoration: none; display: block; }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,0.3); }
+  .card[data-theme="ai"] { --accent: #3b82f6; }
+  .card[data-theme="sport"] { --accent: #f97316; }
+  .card[data-theme="ent"] { --accent: #a78bfa; }
+  .card[data-theme="robot"] { --accent: #0f9d58; }
+  .card[data-theme="auto"] { --accent: #06b6d4; }
+  .card:hover { border-color: var(--accent); }
+  .card-icon { font-size: 32px; margin-bottom: 12px; }
+  .card-title { font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+  .card-topic { font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+  .card-desc { font-size: 13px; color: #7a8a9a; line-height: 1.6; }
+  .card-date { display: inline-block; margin-top: 14px; font-size: 11px; color: #4a5568; background: #0d1520; padding: 3px 10px; border-radius: 12px; }
+  .card-arrow { display: block; text-align: right; margin-top: 12px; font-size: 16px; opacity: 0; transition: opacity 0.2s; }
+  .card:hover .card-arrow { opacity: 1; }
+  .footer { text-align: center; padding: 36px 0; color: #4a5568; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📰 每日新闻聚合</h1>
+    <div class="subtitle">选择板块，快速进入对应新闻页面 · 每个板块8条新闻</div>
+    <div class="date">2026年7月1日 · 星期三 · 共40条新闻</div>
+  </div>
+  <div class="grid">
+    <a class="card" data-theme="ai" href="ai20260701/ai20260701.html">
+      <div class="card-icon">🤖</div>
+      <div class="card-title">AI</div>
+      <div class="card-topic" style="color: #3b82f6">AI</div>
+      <div class="card-desc">Google用AI重塑搜索：2026年7月1日十大新闻、OpenAI发布GPT-5.4：SWE-Bench Pro基准测试得分57.7%、GPT-5.4复杂任务处理能力显著提升、AI搜索功能升级：Google引领行业变革、2026年娱乐产业价值达2.83万亿美元、Tom Hardy或与制片方达成和解，有望回归《MobLand》第三季、AI技术推动娱乐产业数字化转型、OpenAI GPT-5.4展现强大专业任务处理能力</div>
+      <span class="card-date">2026年7月1日</span>
+      <span class="card-arrow" style="color: #3b82f6">→</span>
+    </a>
+    <a class="card" data-theme="robot" href="robot20260701/robot20260701.html">
+      <div class="card-icon">🔧</div>
+      <div class="card-title">机器人</div>
+      <div class="card-topic" style="color: #0f9d58">机器人</div>
+      <div class="card-desc">UBTECH推出面向消费者的仿生人形机器人、人形机器人进入规模化部署新阶段、中国人形机器人风靡全球，租赁市场暴露局限性、CVPR 2026：计算机视觉向物理世界深入发展、优必选U1系列人形机器人亮相深圳、人形机器人投资趋势：从实验到商业化、人形机器人租赁市场面临挑战、计算机视觉技术为人形机器人赋能</div>
+      <span class="card-date">2026年7月1日</span>
+      <span class="card-arrow" style="color: #0f9d58">→</span>
+    </a>
+    <a class="card" data-theme="ent" href="ent20260701/ent20260701.html">
+      <div class="card-icon">🎬</div>
+      <div class="card-title">娱乐</div>
+      <div class="card-topic" style="color: #a78bfa">娱乐</div>
+      <div class="card-desc">Tom Hardy或与制片方和解，有望回归《MobLand》第三季、2026年全球娱乐产业价值达2.83万亿美元、TMZ明星新闻：娱乐圈最新动态、AI技术推动娱乐产业数字化转型、Streaming服务竞争白热化、暑期档电影票房预测、音乐流媒体用户持续增长、娱乐产业投资趋势分析</div>
+      <span class="card-date">2026年7月1日</span>
+      <span class="card-arrow" style="color: #a78bfa">→</span>
+    </a>
+    <a class="card" data-theme="sport" href="sport20260701/sport20260701.html">
+      <div class="card-icon">⚽</div>
+      <div class="card-title">体育</div>
+      <div class="card-topic" style="color: #f97316">体育</div>
+      <div class="card-desc">98.5 The Sports Hub体育评论节目回顾、NBA季后赛激烈角逐 ongoing、MLB赛季中段战况分析、体育广播节目深受球迷喜爱、夏季体育盛事预告、体育解说员专业点评受关注、NBA新赛季球队实力排名、MLB全明星赛前瞻</div>
+      <span class="card-date">2026年7月1日</span>
+      <span class="card-arrow" style="color: #f97316">→</span>
+    </a>
+    <a class="card" data-theme="auto" href="auto20260701/auto20260701.html">
+      <div class="card-icon">🚗</div>
+      <div class="card-title">无人驾驶</div>
+      <div class="card-topic" style="color: #06b6d4">无人驾驶</div>
+      <div class="card-desc">Uber和Waymo结束凤凰城Robotaxi合作、Waymo和Uber结束凤凰城服务，tension加深、特斯拉开始在奥斯汀进行Cybercab工程测试、Waymo重返达拉斯街头、特斯拉开辟不同于对手的监管路径、Robotaxi行业控制权之争加剧、特斯拉Robotaxi扩张计划不变、Waymo达拉斯运营恢复</div>
+      <span class="card-date">2026年7月1日</span>
+      <span class="card-arrow" style="color: #06b6d4">→</span>
+    </a>
+</div>
+  <div class="footer">
+    每日新闻聚合系统 · 点击卡片即可跳转<br>
+    数据来源：各板块独立标注 · 仅供学习参考
+  </div>
+</div>
+</body>
+</html>

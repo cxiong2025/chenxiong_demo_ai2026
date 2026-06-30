@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>##AI日更 · 2026年7月1日（星期三）</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: #0c1220;
+    color: #d8e0e8;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container { max-width: 740px; margin: 0 auto; }
+  .header { text-align: center; padding: 30px 0 20px; }
+  .header h1 { font-size: 28px; color: #fff; margin-bottom: 8px; }
+  .header .subtitle { color: #7a8a9a; font-size: 14px; }
+  .header .date { color: #7a8a9a; font-size: 13px; margin-top: 4px; }
+  .player {
+    background: #19273a;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 20px 0;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  }
+  .player-title {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .player-title .playing-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    margin-left: 10px;
+    font-size: 12px;
+    color: #a78bfa;
+    visibility: hidden;
+  }
+  .player-title .playing-indicator.active { visibility: visible; }
+  .player-title .playing-indicator .bar {
+    display: inline-block;
+    width: 3px;
+    background: #a78bfa;
+    border-radius: 1px;
+    animation: soundBar 0.8s infinite ease-in-out;
+  }
+  .player-title .playing-indicator .bar:nth-child(1) { height: 10px; animation-delay: 0s; }
+  .player-title .playing-indicator .bar:nth-child(2) { height: 14px; animation-delay: 0.15s; }
+  .player-title .playing-indicator .bar:nth-child(3) { height: 8px; animation-delay: 0.3s; }
+  .player-title .playing-indicator .bar:nth-child(4) { height: 12px; animation-delay: 0.45s; }
+  .player-title .playing-indicator .bar:nth-child(5) { height: 6px; animation-delay: 0.6s; }
+  @keyframes soundBar {
+    0%, 100% { transform: scaleY(0.4); }
+    50% { transform: scaleY(1); }
+  }
+  .ctrl-row { display: flex; align-items: center; gap: 14px; }
+  .play-btn {
+    width: 26px; height: 26px;
+    background: #a78bfa;
+    border: none; border-radius: 5px;
+    color: #fff; font-size: 11px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s;
+    line-height: 1;
+  }
+  .play-btn:hover { background: #a78bfa; }
+  .prog-area { flex: 1; display: flex; align-items: center; gap: 10px; }
+  .time-el { font-size: 13px; color: #7a8a9a; white-space: nowrap; font-variant-numeric: tabular-nums; min-width: 38px; }
+  .prog-track { flex: 1; height: 8px; background: #0d1520; border-radius: 4px; cursor: pointer; position: relative; }
+  .prog-fill { height: 100%; background: #a78bfa; border-radius: 4px; width: 0%; transition: width 0.15s linear; }
+  .vol-area { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+  .vol-icon { font-size: 16px; cursor: pointer; color: #7a8a9a; transition: color 0.2s; }
+  .vol-icon:hover { color: #a78bfa; }
+  .vol-slider {
+    width: 70px; height: 4px;
+    -webkit-appearance: none; appearance: none;
+    background: #0d1520; border-radius: 2px;
+    outline: none; cursor: pointer;
+  }
+  .vol-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px; height: 12px;
+    background: #a78bfa; border-radius: 50%;
+    cursor: pointer;
+  }
+  .tags { text-align: center; margin: 10px 0 20px; }
+  .tags span {
+    display: inline-block; background: #152232; color: #7a8a9a;
+    padding: 4px 12px; border-radius: 20px; font-size: 12px;
+    margin: 4px; border: 1px solid rgba(255,255,255,0.06);
+  }
+  .section {
+    background: #152232;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 16px 0;
+    border: 1px solid rgba(255,255,255,0.04);
+    transition: border-color 0.3s;
+  }
+  .section:hover { border-color: rgba(59,130,246,0.25); }
+  .section-number {
+    display: inline-block;
+    background: #a78bfa;
+    color: #fff;
+    width: 28px; height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .section.opening .section-number { background: #a78bfa; }
+  .section.closing .section-number { background: #0F9D58; }
+  .section-title { font-size: 16px; font-weight: 600; color: #fff; vertical-align: middle; }
+  .section-tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  .tag-hot { background: #dc2626; color: #fff; }
+  .tag-trend { background: #0F9D58; color: #fff; }
+  .tag-business { background: #7c3aed; color: #fff; }
+  .tag-policy { background: #F59E0B; color: #fff; }
+  .tag-security { background: #0ea5e9; color: #fff; }
+  .section p {
+    margin-top: 12px;
+    line-height: 1.8;
+    font-size: 15px;
+    color: #b0bec5;
+    text-align: justify;
+  }
+  .footer { text-align: center; padding: 30px 0; color: #4a5568; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>今日娱乐八大新闻</h1>
+    <div class="subtitle">1个数字 · 8条新闻 · 快速了解全球娱乐动态</div>
+    <div class="date">📅 2026年7月1日（星期三）</div>
+  </div>
+  <div class="player">
+    <div class="player-title">
+      🎙️ 今日娱乐八大新闻
+      <span class="playing-indicator" id="playingIndicator">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        正在播放
+      </span>
+    </div>
+    <audio id="audioPlayer" preload="auto">
+      <source src="ent_20260701.mp3" type="audio/mpeg">
+    </audio>
+    <div class="ctrl-row">
+      <button class="play-btn" id="playBtn" title="播放 / 暂停">▶</button>
+      <div class="prog-area">
+        <span class="time-el" id="curTime">00:00</span>
+        <div class="prog-track" id="progTrack">
+          <div class="prog-fill" id="progFill"></div>
+        </div>
+        <span class="time-el" id="totTime">00:00</span>
+      </div>
+      <div class="vol-area">
+        <span class="vol-icon" id="volIcon" title="静音/恢复">🔊</span>
+        <input type="range" class="vol-slider" id="volSlider" min="0" max="100" value="80">
+      </div>
+    </div>
+  </div>
+  <div class="tags">
+    <span>#娱乐</span>
+  </div>
+  <div class="section opening">
+    <span class="section-number">导</span>
+    <span class="section-title">开场</span>
+    <p>大家好，欢迎收看今日娱乐科技速报，我是你们的主播。今天是2026年7月1日，星期三，今天全球ent领域有八条重磅新闻，我们用一个简单的数字，快速了解ent行业的最新动态。准备好，我们开始。</p>
+  </div>
+
+  <div class="section">
+    <span class="section-number">1</span>
+    <span class="section-title">Tom Hardy或与制片方和解，有望回归《MobLand》第三季</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>据最新消息，演员Tom Hardy可能与《MobLand》制片方达成了和解，有望回归该剧第三季的拍摄。此前双方曾因合同条款产生分歧，但目前已基本解决。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">2</span>
+    <span class="section-title">2026年全球娱乐产业价值达2.83万亿美元</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>全球娱乐产业在2026年价值达到2.83万亿美元，Streaming服务、电影票房和音乐流媒体是推动这一增长的主要力量。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">3</span>
+    <span class="section-title">TMZ明星新闻：娱乐圈最新动态</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>TMZ报道了最新的明星新闻和娱乐圈动态，包括多位知名演员和歌手的最新消息。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">4</span>
+    <span class="section-title">AI技术推动娱乐产业数字化转型</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>AI技术正在深刻改变娱乐产业的运作模式，从内容创作到分发，从用户推荐到数据分析，AI的应用无处不在。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">5</span>
+    <span class="section-title">Streaming服务竞争白热化</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>2026年，各大Streaming平台之间的竞争日益激烈，内容投入和用户获取成为关键胜负手。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">6</span>
+    <span class="section-title">暑期档电影票房预测</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>分析师预测2026年暑期档电影票房将达到新高，多部大片即将上映。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">7</span>
+    <span class="section-title">音乐流媒体用户持续增长</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>全球音乐流媒体用户数量在2026年持续增长，Spotify和Apple Music领先市场。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">8</span>
+    <span class="section-title">娱乐产业投资趋势分析</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>2026年娱乐产业投资重点转向AI驱动的内容创作和个性化推荐系统。</p>
+  </div>
+  <div class="section closing">
+    <span class="section-number">结</span>
+    <span class="section-title">总结</span>
+    <p>总结一下，今天的娱乐领域有几个关键词：Tom Hardy或与制片方和解，有望回归《MobLand》第三季、2026年全球娱乐产业价值达2.83万亿美元、TMZ明星新闻：娱乐圈最新动态、AI技术推动娱乐产业数字化转型、Streaming服务竞争白热化、暑期档电影票房预测、音乐流媒体用户持续增长、娱乐产业投资趋势分析。娱乐正在重塑全球行业格局。这就是今天的娱乐科技速报，我们明天再见，拜拜！</p></div>
+  <div class="footer">
+    数据来源：Reuters · New York Post · Forbes · Reuters · PYMNTS · LatestLY · The National Law Review<br>
+    仅供学习参考，不构成任何投资或商业决策建议
+  </div>
+</div>
+<script>
+  var audio = document.getElementById('audioPlayer');
+  var playBtn = document.getElementById('playBtn');
+  var progFill = document.getElementById('progFill');
+  var progTrack = document.getElementById('progTrack');
+  var curTimeEl = document.getElementById('curTime');
+  var totTimeEl = document.getElementById('totTime');
+  var playingIndicator = document.getElementById('playingIndicator');
+  var volSlider = document.getElementById('volSlider');
+  var volIcon = document.getElementById('volIcon');
+  audio.volume = 0.8;
+  function fmt(sec) {
+    var m = Math.floor(sec / 60);
+    var s = Math.floor(sec % 60);
+    return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+  }
+  audio.addEventListener('loadedmetadata', function() {
+    totTimeEl.textContent = fmt(audio.duration);
+  });
+  audio.addEventListener('timeupdate', function() {
+    if (audio.duration) {
+      progFill.style.width = (audio.currentTime / audio.duration * 100) + '%';
+      curTimeEl.textContent = fmt(audio.currentTime);
+    }
+  });
+  audio.addEventListener('ended', function() {
+    playBtn.textContent = '▶';
+    playingIndicator.classList.remove('active');
+    progFill.style.width = '100%';
+  });
+  playBtn.addEventListener('click', function() {
+    if (audio.paused) {
+      audio.play();
+      playBtn.textContent = '⏸';
+      playingIndicator.classList.add('active');
+    } else {
+      audio.pause();
+      playBtn.textContent = '▶';
+      playingIndicator.classList.remove('active');
+    }
+  });
+  progTrack.addEventListener('click', function(e) {
+    var rect = progTrack.getBoundingClientRect();
+    audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
+  });
+  volSlider.addEventListener('input', function() {
+    audio.volume = this.value / 100;
+    if (this.value == 0) volIcon.textContent = '🔇';
+    else if (this.value < 50) volIcon.textContent = '🔉';
+    else volIcon.textContent = '🔊';
+  });
+  volIcon.addEventListener('click', function() {
+    if (audio.volume > 0) {
+      audio.volume = 0;
+      volSlider.value = 0;
+      volIcon.textContent = '🔇';
+    } else {
+      audio.volume = 0.8;
+      volSlider.value = 80;
+      volIcon.textContent = '🔊';
+    }
+  });
+</script>
+</body>
+</html>
