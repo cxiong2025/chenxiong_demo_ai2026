@@ -1,0 +1,50 @@
+[
+  {
+    "title": "OpenAI与AWS合作推出Amazon Bedrock Managed Agents",
+    "abstract": "OpenAI与AWS宣布合作，推出基于OpenAI前沿模型的Amazon Bedrock Managed Agents，专为构建代理解决方案而优化。客户可以将OpenAI模型使用量计入现有AWS云额度。",
+    "source": "CRN",
+    "url": "https://www.crn.com"
+  },
+  {
+    "title": "Gemini 3.5 Pro延期至7月发布，谷歌市值蒸发2250亿美元",
+    "abstract": "谷歌在十天内遭遇双重打击：旗舰Gemini 3.5 Pro模型从6月延期至7月发布，两名顶级研究人员离职。谷歌正经历人工智能时代最糟糕的两周。",
+    "source": "Tech Insider",
+    "url": "https://tech-insider.org"
+  },
+  {
+    "title": "OpenAI基金会宣布2026年度以人为本AI基金：50亿美元",
+    "abstract": "OpenAI基金会宣布设立50亿美元的\"以人为本AI基金\"，专注于推动AI技术的负责任发展和应用，确保AI技术惠及更多人群。",
+    "source": "Facebook",
+    "url": "https://www.facebook.com"
+  },
+  {
+    "title": "AWS 2026年前十大AI新闻：OpenAI、裁员与AI...",
+    "abstract": "2026年上半年AWS十大AI新闻包括OpenAI合作、大规模裁员和AI基础设施建设。AWS正在加速企业AI转型，推动云计算与AI深度融合。",
+    "source": "CRN",
+    "url": "https://www.crn.com"
+  },
+  {
+    "title": "谷歌AI研究员集体离职引发行业震动",
+    "abstract": "谷歌两名最受尊敬的研究人员在短时间内离职，引发行业对谷歌AI研发团队的担忧。这可能影响谷歌未来AI产品的竞争力。",
+    "source": "Tech Insider",
+    "url": "https://tech-insider.org"
+  },
+  {
+    "title": "OpenAI代理用户持续增长，非技术人员成主力",
+    "abstract": "OpenAI的代理技术在2026年继续快速增长，非技术人员成为主要用户群体，标志着AI代理正从专业工具走向大众应用。",
+    "source": "smarterx.ai",
+    "url": "https://smarterx.ai"
+  },
+  {
+    "title": "AWS推动企业AI转型，云与AI深度融合",
+    "abstract": "AWS在2026年加速企业AI转型，通过Bedrock等平台降低AI使用门槛，推动云计算与人工智能的深度融合，为企业提供更高效的AI解决方案。",
+    "source": "CRN",
+    "url": "https://www.crn.com"
+  },
+  {
+    "title": "OpenAI基金会在AI伦理领域加大投入",
+    "abstract": "OpenAI基金会宣布在AI伦理领域加大投入，通过50亿美元基金支持负责任AI技术的发展，确保技术进步惠及全社会。",
+    "source": "Facebook",
+    "url": "https://www.facebook.com"
+  }
+]

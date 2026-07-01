@@ -1,0 +1,50 @@
+[
+  {
+    "title": "特斯拉FSD v14 Lite更新至HW3车辆",
+    "abstract": "特斯拉开始向Hardware 3车辆推送FSD v14 Lite更新，这是该硬件自2025年初以来的首次重大更新。新版本的驾驶行为从特斯拉更新的HW4计算机中提取，增加了更好的合并、停车和行人处理能力。",
+    "source": "CBT News",
+    "url": "https://www.cbtnews.com"
+  },
+  {
+    "title": "特斯拉Cybercab正式被归类为L4级自动驾驶车辆",
+    "abstract": "特斯拉的新款Cybercab Robotaxi被正式归类为L4级自动驾驶车辆，能够在整个驾驶任务中无需人类干预。根据特斯拉新发布的《首次 responders 互动计划》，Cybercab在乘客行程期间始终无人驾驶。",
+    "source": "Facebook",
+    "url": "https://www.facebook.com"
+  },
+  {
+    "title": "特斯拉Robotaxi在德州真实用户反馈",
+    "abstract": "特斯拉Robotaxi在德州的真实用户反馈显示，无人驾驶体验总体良好，但仍有一些改进空间。用户对安全性和舒适性给予了积极评价。",
+    "source": "Basenor",
+    "url": "https://www.basenor.com"
+  },
+  {
+    "title": "Waymo每周无人驾驶乘车服务达50万次",
+    "abstract": "Waymo目前每周交付约50万次付费无人驾驶乘车服务，覆盖凤凰城、旧金山、洛杉矶、奥斯汀、亚特兰大、迈阿密、达拉斯、休斯顿、圣安东尼奥和奥兰多等城市。",
+    "source": "electrek.co",
+    "url": "https://electrek.co"
+  },
+  {
+    "title": "Waymo和Uber在美国主要市场达成Robotaxi协议",
+    "abstract": "Waymo和Uber在美国主要市场达成新的Robotaxi合作协议，Waymo在凤凰城的试点结束后，车辆将用于DoorDash配送实验。",
+    "source": "thestreet.com",
+    "url": "https://www.thestreet.com"
+  },
+  {
+    "title": "特斯拉开辟不同于对手的监管路径",
+    "abstract": "特斯拉选择了与竞争对手不同的监管路径来推进其Robotaxi业务，这一策略可能为其带来先发优势。",
+    "source": "electrek.co",
+    "url": "https://electrek.co"
+  },
+  {
+    "title": "Robotaxi行业控制权之争加剧",
+    "abstract": "Uber和Waymo的分道扬镳反映了Robotaxi行业围绕控制权的更大争斗，自动驾驶技术公司和打车平台之间谁将主导未来市场，仍是未知数。",
+    "source": "thestreet.com",
+    "url": "https://www.thestreet.com"
+  },
+  {
+    "title": "Waymo伦敦服务将改变英国出行格局",
+    "abstract": "Waymo确认将在伦敦推出自动驾驶网约车服务，这将深刻改变英国的出行格局，标志着自动驾驶技术在欧洲市场的重要突破。",
+    "source": "evpowered.co.uk",
+    "url": "https://evpowered.co.uk"
+  }
+]

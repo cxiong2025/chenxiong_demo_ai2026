@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日新闻聚合 · 2026年7月2日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif; background: #0c1220; color: #d8e0e8; min-height: 100vh; padding: 20px; }
+  .container { max-width: 760px; margin: 0 auto; }
+  .header { text-align: center; padding: 36px 0 32px; }
+  .header h1 { font-size: 30px; color: #fff; margin-bottom: 8px; }
+  .header .subtitle { color: #7a8a9a; font-size: 14px; }
+  .header .date { color: #4a5568; font-size: 13px; margin-top: 6px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .card { background: #152232; border-radius: 16px; padding: 28px 26px; border: 1px solid rgba(255,255,255,0.04); transition: border-color 0.3s, transform 0.2s, box-shadow 0.3s; cursor: pointer; text-decoration: none; display: block; }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,0.3); }
+  .card[data-theme="ai"] { --accent: #3b82f6; }
+  .card[data-theme="sport"] { --accent: #f97316; }
+  .card[data-theme="ent"] { --accent: #a78bfa; }
+  .card[data-theme="robot"] { --accent: #0f9d58; }
+  .card[data-theme="auto"] { --accent: #06b6d4; }
+  .card:hover { border-color: var(--accent); }
+  .card-icon { font-size: 32px; margin-bottom: 12px; }
+  .card-title { font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+  .card-topic { font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+  .card-desc { font-size: 13px; color: #7a8a9a; line-height: 1.6; }
+  .card-date { display: inline-block; margin-top: 14px; font-size: 11px; color: #4a5568; background: #0d1520; padding: 3px 10px; border-radius: 12px; }
+  .card-arrow { display: block; text-align: right; margin-top: 12px; font-size: 16px; opacity: 0; transition: opacity 0.2s; }
+  .card:hover .card-arrow { opacity: 1; }
+  .footer { text-align: center; padding: 36px 0; color: #4a5568; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📰 每日新闻聚合</h1>
+    <div class="subtitle">选择板块，快速进入对应新闻页面 · 每个板块8条新闻</div>
+    <div class="date">2026年7月2日 · 星期四 · 共40条新闻</div>
+  </div>
+  <div class="grid">
+    <a class="card" data-theme="ai" href="ai20260702/ai20260702.html">
+      <div class="card-icon">🤖</div>
+      <div class="card-title">AI</div>
+      <div class="card-topic" style="color: #3b82f6">AI</div>
+      <div class="card-desc">OpenAI与AWS合作推出Amazon Bedrock Managed Agents、Gemini 3.5 Pro延期至7月发布，谷歌市值蒸发2250亿美元、OpenAI基金会宣布2026年度以人为本AI基金：50亿美元、AWS 2026年前十大AI新闻：OpenAI、裁员与AI...、谷歌AI研究员集体离职引发行业震动、OpenAI代理用户持续增长，非技术人员成主力、AWS推动企业AI转型，云与AI深度融合、OpenAI基金会在AI伦理领域加大投入</div>
+      <span class="card-date">2026年7月2日</span>
+      <span class="card-arrow" style="color: #3b82f6">→</span>
+    </a>
+    <a class="card" data-theme="robot" href="robot20260702/robot20260702.html">
+      <div class="card-icon">🔧</div>
+      <div class="card-title">机器人</div>
+      <div class="card-topic" style="color: #0f9d58">机器人</div>
+      <div class="card-desc">Leadshine在Automate 2026展示人形机器人驱动技术、人形机器人进入规模化部署新阶段、Boston Dynamics Atlas初期部署进展顺利、Automate 2026：人形机器人工业价值获认可、优必选U1系列人形机器人持续热销、人形机器人投资趋势：从实验到商业化、工业机器人向理解物理世界演进、人形机器人租赁市场面临新挑战</div>
+      <span class="card-date">2026年7月2日</span>
+      <span class="card-arrow" style="color: #0f9d58">→</span>
+    </a>
+    <a class="card" data-theme="ent" href="ent20260702/ent20260702.html">
+      <div class="card-icon">🎬</div>
+      <div class="card-title">娱乐</div>
+      <div class="card-topic" style="color: #a78bfa">娱乐</div>
+      <div class="card-desc">普林斯顿7月2日娱乐活动指南、Netflix 7月新片单持续更新、全球娱乐产业价值突破3万亿美元、暑期档电影票房持续强劲、小黄人新电影全球热映、Streaming服务竞争持续白热化、音乐流媒体用户持续增长、娱乐产业投资向AI驱动内容倾斜</div>
+      <span class="card-date">2026年7月2日</span>
+      <span class="card-arrow" style="color: #a78bfa">→</span>
+    </a>
+    <a class="card" data-theme="sport" href="sport20260702/sport20260702.html">
+      <div class="card-icon">⚽</div>
+      <div class="card-title">体育</div>
+      <div class="card-topic" style="color: #f97316">体育</div>
+      <div class="card-desc">7月2日体育比分汇总、比利时对阵塞内加尔：美洲杯焦点战、美国对阵波黑：美洲杯关键战役、NBA季后赛进入白热化阶段、MLB赛季中段战况分析、体育广播节目深受球迷喜爱、夏季体育盛事密集来袭、高尔夫赛事本周聚焦</div>
+      <span class="card-date">2026年7月2日</span>
+      <span class="card-arrow" style="color: #f97316">→</span>
+    </a>
+    <a class="card" data-theme="auto" href="auto20260702/auto20260702.html">
+      <div class="card-icon">🚗</div>
+      <div class="card-title">无人驾驶</div>
+      <div class="card-topic" style="color: #06b6d4">无人驾驶</div>
+      <div class="card-desc">特斯拉FSD v14 Lite更新至HW3车辆、特斯拉Cybercab正式被归类为L4级自动驾驶车辆、特斯拉Robotaxi在德州真实用户反馈、Waymo每周无人驾驶乘车服务达50万次、Waymo和Uber在美国主要市场达成Robotaxi协议、特斯拉开辟不同于对手的监管路径、Robotaxi行业控制权之争加剧、Waymo伦敦服务将改变英国出行格局</div>
+      <span class="card-date">2026年7月2日</span>
+      <span class="card-arrow" style="color: #06b6d4">→</span>
+    </a>
+</div>
+  <div class="footer">
+    每日新闻聚合系统 · 点击卡片即可跳转<br>
+    数据来源：各板块独立标注 · 仅供学习参考
+  </div>
+</div>
+</body>
+</html>
