@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日新闻聚合 · 2026年7月4日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: #0c1220;
+    color: #d8e0e8;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container { max-width: 760px; margin: 0 auto; }
+  .header { text-align: center; padding: 36px 0 32px; }
+  .header h1 { font-size: 30px; color: #fff; margin-bottom: 8px; }
+  .header .subtitle { color: #7a8a9a; font-size: 14px; }
+  .header .date { color: #4a5568; font-size: 13px; margin-top: 6px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .card { background: #152232; border-radius: 16px; padding: 28px 26px; border: 1px solid rgba(255,255,255,0.04); transition: border-color 0.3s, transform 0.2s, box-shadow 0.3s; cursor: pointer; text-decoration: none; display: block; }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,0.3); }
+  .card[data-theme="ai"] { --accent: #3b82f6; }
+  .card[data-theme="sport"] { --accent: #f97316; }
+  .card[data-theme="ent"] { --accent: #a78bfa; }
+  .card[data-theme="robot"] { --accent: #0f9d58; }
+  .card[data-theme="auto"] { --accent: #06b6d4; }
+  .card:hover { border-color: var(--accent); }
+  .card-icon { font-size: 32px; margin-bottom: 12px; }
+  .card-title { font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+  .card-topic { font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+  .card-desc { font-size: 13px; color: #7a8a9a; line-height: 1.6; }
+  .card-date { display: inline-block; margin-top: 14px; font-size: 11px; color: #4a5568; background: #0d1520; padding: 3px 10px; border-radius: 12px; }
+  .card-arrow { display: block; text-align: right; margin-top: 12px; font-size: 16px; opacity: 0; transition: opacity 0.2s; }
+  .card:hover .card-arrow { opacity: 1; }
+  .footer { text-align: center; padding: 36px 0; color: #4a5568; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📰 每日新闻聚合</h1>
+    <div class="subtitle">选择板块，快速进入对应新闻页面 · 每个板块8条新闻</div>
+    <div class="date">2026年7月4日 · 星期六 · 共40条新闻</div>
+  </div>
+  <div class="grid">
+
+    <a class="card" data-theme="ai" href="ai20260704/ai20260704.html">
+      <div class="card-icon">🤖</div>
+      <div class="card-title">AI 资讯</div>
+      <div class="card-topic" style="color: #3b82f6">AI DEVELOPMENT</div>
+      <div class="card-desc">首届"神智杯"AI创新竞赛初赛评审完成、PagerDuty董事长警告AI智能体故障风险、日本计划用数百万机器人驱动劳动力转型、Meta扎克伯格承认AI智能体进展不如预期...</div>
+      <span class="card-date">2026年7月4日</span>
+      <span class="card-arrow" style="color: #3b82f6">→</span>
+    </a>
+
+    <a class="card" data-theme="sport" href="sport20260704/sport20260704.html">
+      <div class="card-icon">⚽</div>
+      <div class="card-title">体育 资讯</div>
+      <div class="card-topic" style="color: #f97316">体育 DEVELOPMENT</div>
+      <div class="card-desc">英格兰队在世界杯生死战中险胜刚果民主共和国、美国主帅波切蒂诺巴洛贡不该得红牌、瑞士队横扫阿尔及利亚晋级世界杯16强、C罗和葡萄牙队晋级世界杯16强...</div>
+      <span class="card-date">2026年7月4日</span>
+      <span class="card-arrow" style="color: #f97316">→</span>
+    </a>
+
+    <a class="card" data-theme="ent" href="ent20260704/ent20260704.html">
+      <div class="card-icon">🎬</div>
+      <div class="card-title">娱乐 资讯</div>
+      <div class="card-topic" style="color: #a78bfa">娱乐 DEVELOPMENT</div>
+      <div class="card-desc">2026年7月Peacock新片单公布、2026年7月Netflix新片单威尔法瑞尔回归、2026年7月Prime Video新片单、2026年7月电影前瞻CNN精选必看影片...</div>
+      <span class="card-date">2026年7月4日</span>
+      <span class="card-arrow" style="color: #a78bfa">→</span>
+    </a>
+
+    <a class="card" data-theme="robot" href="robot20260704/robot20260704.html">
+      <div class="card-icon">🔧</div>
+      <div class="card-title">机器人 资讯</div>
+      <div class="card-topic" style="color: #0f9d58">机器人 DEVELOPMENT</div>
+      <div class="card-desc">X Square Robot构建全栈式具身AI和通用机器人、宝马在美国工厂部署Figure人形机器人、Genesis AI发布Eno通用机器人、印度寺庙机器人大象引发争议...</div>
+      <span class="card-date">2026年7月4日</span>
+      <span class="card-arrow" style="color: #0f9d58">→</span>
+    </a>
+
+    <a class="card" data-theme="auto" href="auto20260704/auto20260704.html">
+      <div class="card-icon">🚗</div>
+      <div class="card-title">无人驾驶 资讯</div>
+      <div class="card-topic" style="color: #06b6d4">无人驾驶 DEVELOPMENT</div>
+      <div class="card-desc">特斯拉司机因撞入德州住宅被控过失杀人、特斯拉在自动驾驶领域面临强劲新对手、Uber和Waymo在凤凰城终止Robotaxi合作、自动驾驶行业新闻汇总...</div>
+      <span class="card-date">2026年7月4日</span>
+      <span class="card-arrow" style="color: #06b6d4">→</span>
+    </a>
+
+  </div>
+  
+  <div class="footer">
+    数据来源：网络搜索结果 | 生成时间：2026年7月4日 星期六
+  </div>
+</div>
+</body>
+</html>

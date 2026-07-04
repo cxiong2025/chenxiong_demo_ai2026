@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>机器人日更 · 2026年7月4日（星期六）</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: #0c1220;
+    color: #d8e0e8;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container { max-width: 740px; margin: 0 auto; }
+  .header { text-align: center; padding: 30px 0 20px; }
+  .header h1 { font-size: 28px; color: #fff; margin-bottom: 8px; }
+  .header .subtitle { color: #7a8a9a; font-size: 14px; }
+  .header .date { color: #7a8a9a; font-size: 13px; margin-top: 4px; }
+  .player {
+    background: #19273a;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 20px 0;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  }
+  .player-title {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .player-title .playing-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    margin-left: 10px;
+    font-size: 12px;
+    color: #0f9d58;
+    visibility: hidden;
+  }
+  .player-title .playing-indicator.active { visibility: visible; }
+  .player-title .playing-indicator .bar {
+    display: inline-block;
+    width: 3px;
+    background: #0f9d58;
+    border-radius: 1px;
+    animation: soundBar 0.8s infinite ease-in-out;
+  }
+  .player-title .playing-indicator .bar:nth-child(1) { height: 10px; animation-delay: 0s; }
+  .player-title .playing-indicator .bar:nth-child(2) { height: 14px; animation-delay: 0.15s; }
+  .player-title .playing-indicator .bar:nth-child(3) { height: 8px; animation-delay: 0.3s; }
+  .player-title .playing-indicator .bar:nth-child(4) { height: 12px; animation-delay: 0.45s; }
+  .player-title .playing-indicator .bar:nth-child(5) { height: 6px; animation-delay: 0.6s; }
+  @keyframes soundBar {
+    0%, 100% { transform: scaleY(0.4); }
+    50% { transform: scaleY(1); }
+  }
+  .ctrl-row { display: flex; align-items: center; gap: 14px; }
+  .play-btn {
+    width: 26px; height: 26px;
+    background: #0f9d58;
+    border: none; border-radius: 5px;
+    color: #fff; font-size: 11px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s;
+    line-height: 1;
+  }
+  .play-btn:hover { background: #0f9d58; }
+  .prog-area { flex: 1; display: flex; align-items: center; gap: 10px; }
+  .time-el { font-size: 13px; color: #7a8a9a; white-space: nowrap; font-variant-numeric: tabular-nums; min-width: 38px; }
+  .prog-track { flex: 1; height: 8px; background: #0d1520; border-radius: 4px; cursor: pointer; position: relative; }
+  .prog-fill { height: 100%; background: #0f9d58; border-radius: 4px; width: 0%; transition: width 0.15s linear; }
+  .vol-area { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+  .vol-icon { font-size: 16px; cursor: pointer; color: #7a8a9a; transition: color 0.2s; }
+  .vol-icon:hover { color: #0f9d58; }
+  .vol-slider {
+    width: 70px; height: 4px;
+    -webkit-appearance: none; appearance: none;
+    background: #0d1520; border-radius: 2px;
+    outline: none; cursor: pointer;
+  }
+  .vol-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px; height: 12px;
+    background: #0f9d58; border-radius: 50%;
+    cursor: pointer;
+  }
+  .tags { text-align: center; margin: 10px 0 20px; }
+  .tags span {
+    display: inline-block; background: #152232; color: #7a8a9a;
+    padding: 4px 12px; border-radius: 20px; font-size: 12px;
+    margin: 4px; border: 1px solid rgba(255,255,255,0.06);
+  }
+  .section {
+    background: #152232;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 16px 0;
+    border: 1px solid rgba(255,255,255,0.04);
+    transition: border-color 0.3s;
+  }
+  .section:hover { border-color: rgba(59,130,246,0.25); }
+  .section-number {
+    display: inline-block;
+    background: #0f9d58;
+    color: #fff;
+    width: 28px; height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .section.opening .section-number { background: #0f9d58; }
+  .section.closing .section-number { background: #0F9D58; }
+  .section-title { font-size: 16px; font-weight: 600; color: #fff; vertical-align: middle; }
+  .section-tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  .tag-hot { background: #dc2626; color: #fff; }
+  .tag-trend { background: #0F9D58; color: #fff; }
+  .tag-business { background: #7c3aed; color: #fff; }
+  .tag-policy { background: #F59E0B; color: #fff; }
+  .tag-security { background: #0ea5e9; color: #fff; }
+  .section p {
+    margin-top: 12px;
+    line-height: 1.8;
+    font-size: 15px;
+    color: #b0bec5;
+    text-align: justify;
+  }
+  .footer { text-align: center; padding: 30px 0; color: #4a5568; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>今日机器人八大新闻</h1>
+    <div class="subtitle">1个数字 · 8条新闻 · 快速了解全球机器人动态</div>
+    <div class="date">📅 2026年7月4日（星期六）</div>
+  </div>
+  <div class="player">
+    <div class="player-title">
+      🎙️ 今日机器人八大新闻
+      <span class="playing-indicator" id="playingIndicator">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        正在播放
+      </span>
+    </div>
+    <audio id="audioPlayer" preload="auto">
+      <source src="robot_20260704.mp3" type="audio/mpeg">
+    </audio>
+    <div class="ctrl-row">
+      <button class="play-btn" id="playBtn" title="播放 / 暂停">▶</button>
+      <div class="prog-area">
+        <span class="time-el" id="curTime">00:00</span>
+        <div class="prog-track" id="progTrack">
+          <div class="prog-fill" id="progFill"></div>
+        </div>
+        <span class="time-el" id="totTime">00:00</span>
+      </div>
+      <div class="vol-area">
+        <span class="vol-icon" id="volIcon" title="静音/恢复">🔊</span>
+        <input type="range" class="vol-slider" id="volSlider" min="0" max="100" value="80">
+      </div>
+    </div>
+  </div>
+  <div class="tags">
+    <span>#机器人</span>
+  </div>
+  <div class="section opening">
+    <span class="section-number">导</span>
+    <span class="section-title">开场</span>
+    <p>大家好，欢迎收看今日机器人科技速报，我是你们的主播。今天是2026年7月4日，星期六，今天机器人领域有八条重磅新闻，我们用一个简单的数字，快速了解机器人行业的最新动态。准备好，我们开始。</p>
+  </div>
+
+  <div class="section">
+    <span class="section-number">1</span>
+    <span class="section-title">X Square Robot构建全栈式具身AI和通用机器人</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>X Square Robot估值超过200亿元人民币，该公司正在构建全栈式具身AI和通用机器人解决方案。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">2</span>
+    <span class="section-title">宝马在美国工厂部署Figure人形机器人</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>宝马在美国工厂部署了Figure人形机器人，用于生产线上的物料搬运和质检工作。这是人形机器人在汽车制造业的重要应用。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">3</span>
+    <span class="section-title">Genesis AI发布Eno通用机器人</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>Genesis AI发布了首款通用机器人Eno，采用轮式底座和可调节面板塔设计，适用于多种工业场景。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">4</span>
+    <span class="section-title">印度寺庙机器人大象引发争议</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>印度南部喀拉拉邦的寺庙中出现了机器人大象，吸引了大量游客，但也引发了关于宗教仪式真实性的争议。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">5</span>
+    <span class="section-title">SAIMY AI发布梦想公司蓝图</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>SAIMY AI在美国独立250周年之际发布了"梦想公司"蓝图，将AI原生技术应用于机器人领域。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">6</span>
+    <span class="section-title">Godot收紧贡献政策限制AI代码</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>开源游戏引擎Godot收紧了代码贡献政策，限制AI生成代码的使用，引发了开发者社区的广泛讨论。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">7</span>
+    <span class="section-title">台积电股票被Elevation Point减持</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>Elevation Point Wealth Partners LLC减持了台积电股票，市场关注半导体行业与AI芯片需求的关联。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">8</span>
+    <span class="section-title">Automate 2026展会聚焦人形机器人和物理AI</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>2026年Automate展会上，人形机器人和物理AI成为绝对主角，ABB、Rockwell Automation等巨头纷纷展示最新成果。</p>
+  </div>
+  <div class="section closing">
+    <span class="section-number">结</span>
+    <span class="section-title">总结</span>
+    <p>总结一下，今天的机器人领域有几个关键词：X Square Robot构建全栈式具身AI和通用机器人、宝马在美国工厂部署Figure人形机器人、Genesis AI发布Eno通用机器人、印度寺庙机器人大象引发争议、SAIMY AI发布梦想公司蓝图、Godot收紧贡献政策限制AI代码、台积电股票被Elevation Point减持、Automate 2026展会聚焦人形机器人和物理AI。这就是今天机器人科技速报，我们明天再见，拜拜！
+  </div>
+  <div class="footer">
+    数据来源：网络搜索结果 | 生成时间：2026年7月4日 星期六
+  </div>
+</div>
+<script>
+  var audio = document.getElementById('audioPlayer');
+  var playBtn = document.getElementById('playBtn');
+  var progFill = document.getElementById('progFill');
+  var progTrack = document.getElementById('progTrack');
+  var curTimeEl = document.getElementById('curTime');
+  var totTimeEl = document.getElementById('totTime');
+  var playingIndicator = document.getElementById('playingIndicator');
+  var volSlider = document.getElementById('volSlider');
+  var volIcon = document.getElementById('volIcon');
+  audio.volume = 0.8;
+  function fmt(sec) {
+    var m = Math.floor(sec / 60);
+    var s = Math.floor(sec % 60);
+    return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+  }
+  audio.addEventListener('loadedmetadata', function() {
+    totTimeEl.textContent = fmt(audio.duration);
+  });
+  audio.addEventListener('timeupdate', function() {
+    if (audio.duration) {
+      progFill.style.width = (audio.currentTime / audio.duration * 100) + '%';
+      curTimeEl.textContent = fmt(audio.currentTime);
+    }
+  });
+  audio.addEventListener('ended', function() {
+    playBtn.textContent = '▶';
+    playingIndicator.classList.remove('active');
+    progFill.style.width = '100%';
+  });
+  playBtn.addEventListener('click', function() {
+    if (audio.paused) {
+      audio.play();
+      playBtn.textContent = '⏸';
+      playingIndicator.classList.add('active');
+    } else {
+      audio.pause();
+      playBtn.textContent = '▶';
+      playingIndicator.classList.remove('active');
+    }
+  });
+  progTrack.addEventListener('click', function(e) {
+    var rect = progTrack.getBoundingClientRect();
+    audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
+  });
+  volSlider.addEventListener('input', function() {
+    audio.volume = this.value / 100;
+    if (this.value == 0) volIcon.textContent = '🔇';
+    else if (this.value < 50) volIcon.textContent = '🔉';
+    else volIcon.textContent = '🔊';
+  });
+  volIcon.addEventListener('click', function() {
+    if (audio.volume > 0) {
+      audio.volume = 0;
+      volSlider.value = 0;
+      volIcon.textContent = '🔇';
+    } else {
+      audio.volume = 0.8;
+      volSlider.value = 80;
+      volIcon.textContent = '🔊';
+    }
+  });
+</script>
+</body>
+</html>
