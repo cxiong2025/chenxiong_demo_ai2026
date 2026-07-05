@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Netflix发布互动恐怖游戏Unhinged",
+    "tag": "游戏",
+    "summary": "Netflix推出全新互动恐怖游戏Unhinged，结合AI叙事引擎，玩家选择影响故事走向。",
+    "source": "RaillyNews"
+  },
+  {
+    "title": "OpenAI宣布7月15日发布新产品",
+    "tag": "AI产品",
+    "summary": "OpenAI预告将于7月15日发布新产品，市场猜测可能是新一代AI助手或企业级AI服务平台。",
+    "source": "RaillyNews"
+  },
+  {
+    "title": "儿童接受AI速度远超成人",
+    "tag": "AI教育",
+    "summary": "最新研究显示，儿童在学习和使用AI工具方面表现远超成年人。",
+    "source": "RaillyNews"
+  },
+  {
+    "title": "社交媒体内容创作者新规出台",
+    "tag": "AI监管",
+    "summary": "多国出台社交媒体内容创作者新规，要求标注AI生成内容。",
+    "source": "RaillyNews"
+  },
+  {
+    "title": "AI音乐创作市场爆发",
+    "tag": "AI音乐",
+    "summary": "AI音乐创作工具普及，独立音乐人借助AI降低制作门槛，原创音乐产量大幅增长。",
+    "source": "Billboard"
+  },
+  {
+    "title": "好莱坞编剧工会与AI达成新协议",
+    "tag": "AI影视",
+    "summary": "好莱坞编剧工会与制片方就AI使用达成新协议，明确AI辅助创作的版权归属。",
+    "source": "Variety"
+  },
+  {
+    "title": "虚拟偶像产业快速增长",
+    "tag": "虚拟偶像",
+    "summary": "虚拟偶像产业在AI技术推动下快速增长，新一代AI虚拟偶像具备实时互动能力。",
+    "source": "Forbes"
+  },
+  {
+    "title": "AI电影短片获国际电影节大奖",
+    "tag": "AI电影",
+    "summary": "一部完全由AI辅助制作的短片获得国际电影节最佳短片奖。",
+    "source": "IndieWire"
+  }
+]
