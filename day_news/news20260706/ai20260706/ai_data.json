@@ -1,0 +1,50 @@
+[
+  {
+    "title": "日本计划用数百万机器人驱动劳动力",
+    "snippet": "日本政府宣布计划在未来十年内引入数百万台机器人，以应对人口老龄化和劳动力短缺问题。这些机器人将广泛应用于制造业、医疗护理和服务业。",
+    "url": "https://raillynews.com",
+    "source": "RaillyNews"
+  },
+  {
+    "title": "Godot收紧贡献政策限制AI代码",
+    "snippet": "开源游戏引擎Godot宣布收紧代码贡献政策，限制AI生成代码的直接提交，要求开发者对AI辅助代码进行人工审查和验证。",
+    "url": "https://letsdatascience.com",
+    "source": "Let's Data Science"
+  },
+  {
+    "title": "TCS第一季度财报预览：聚焦AI、需求和利润率",
+    "snippet": "塔塔咨询服务公司将于本周公布截至6月的季度财务结果，市场关注其AI业务增长、客户需求变化以及利润率走势。",
+    "url": "https://whalesbook.com",
+    "source": "Whalesbook"
+  },
+  {
+    "title": "农业AI市场规模预计2035年达245.5亿美元",
+    "snippet": "最新研究报告显示，全球农业人工智能市场正以惊人速度增长，预计到2035年将达到245.5亿美元，智能农机和精准农业成为主要驱动力。",
+    "url": "https://yahoo.com",
+    "source": "Yahoo Finance"
+  },
+  {
+    "title": "AI正在迫使新的工作方式进入职场",
+    "snippet": "新一代劳动者正在适应AI时代的工作方式，随着第一份完全由AI取代的工作出现，年轻人需要在人机协作中找到自己的定位。",
+    "url": "https://theaijournal.com",
+    "source": "The AI Journal"
+  },
+  {
+    "title": "特朗普政府解除Anthropic Claude模型限制",
+    "snippet": "在美国网络安全警报后，特朗普政府决定解除对Anthropic公司Claude模型的使用限制，认为其安全措施已得到充分验证。",
+    "url": "https://washingtonpost.com",
+    "source": "Washington Post"
+  },
+  {
+    "title": "AI的希望与恐惧主导全球央行会议",
+    "snippet": "在全球央行行长会议上，人工智能对金融市场的影响成为热议话题，各国央行官员讨论了AI可能带来的机遇和风险。",
+    "url": "https://reuters.com",
+    "source": "Reuters"
+  },
+  {
+    "title": "Anthropic获得2026年至今最大胜利",
+    "snippet": "AI安全研究公司Anthropic近期取得重大突破，其最新模型在多项基准测试中表现优异，获得了业界广泛认可。",
+    "url": "https://thestreet.com",
+    "source": "TheStreet"
+  }
+]

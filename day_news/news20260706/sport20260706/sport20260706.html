@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>##体育日更 · 2026年7月6日（星期一）</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: #0c1220;
+    color: #d8e0e8;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container { max-width: 740px; margin: 0 auto; }
+  .header { text-align: center; padding: 30px 0 20px; }
+  .header h1 { font-size: 28px; color: #fff; margin-bottom: 8px; }
+  .header .subtitle { color: #7a8a9a; font-size: 14px; }
+  .header .date { color: #7a8a9a; font-size: 13px; margin-top: 4px; }
+  .player {
+    background: #19273a;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 20px 0;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  }
+  .player-title {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .player-title .playing-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    margin-left: 10px;
+    font-size: 12px;
+    color: #f97316;
+    visibility: hidden;
+  }
+  .player-title .playing-indicator.active { visibility: visible; }
+  .player-title .playing-indicator .bar {
+    display: inline-block;
+    width: 3px;
+    background: #f97316;
+    border-radius: 1px;
+    animation: soundBar 0.8s infinite ease-in-out;
+  }
+  .player-title .playing-indicator .bar:nth-child(1) { height: 10px; animation-delay: 0s; }
+  .player-title .playing-indicator .bar:nth-child(2) { height: 14px; animation-delay: 0.15s; }
+  .player-title .playing-indicator .bar:nth-child(3) { height: 8px; animation-delay: 0.3s; }
+  .player-title .playing-indicator .bar:nth-child(4) { height: 12px; animation-delay: 0.45s; }
+  .player-title .playing-indicator .bar:nth-child(5) { height: 6px; animation-delay: 0.6s; }
+  @keyframes soundBar {
+    0%, 100% { transform: scaleY(0.4); }
+    50% { transform: scaleY(1); }
+  }
+  .ctrl-row { display: flex; align-items: center; gap: 14px; }
+  .play-btn {
+    width: 26px; height: 26px;
+    background: #f97316;
+    border: none; border-radius: 5px;
+    color: #fff; font-size: 11px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s;
+    line-height: 1;
+  }
+  .play-btn:hover { background: #f97316; }
+  .prog-area { flex: 1; display: flex; align-items: center; gap: 10px; }
+  .time-el { font-size: 13px; color: #7a8a9a; white-space: nowrap; font-variant-numeric: tabular-nums; min-width: 38px; }
+  .prog-track { flex: 1; height: 8px; background: #0d1520; border-radius: 4px; cursor: pointer; position: relative; }
+  .prog-fill { height: 100%; background: #f97316; border-radius: 4px; width: 0%; transition: width 0.15s linear; }
+  .vol-area { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+  .vol-icon { font-size: 16px; cursor: pointer; color: #7a8a9a; transition: color 0.2s; }
+  .vol-icon:hover { color: #f97316; }
+  .vol-slider {
+    width: 70px; height: 4px;
+    -webkit-appearance: none; appearance: none;
+    background: #0d1520; border-radius: 2px;
+    outline: none; cursor: pointer;
+  }
+  .vol-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px; height: 12px;
+    background: #f97316; border-radius: 50%;
+    cursor: pointer;
+  }
+  .tags { text-align: center; margin: 10px 0 20px; }
+  .tags span {
+    display: inline-block; background: #152232; color: #7a8a9a;
+    padding: 4px 12px; border-radius: 20px; font-size: 12px;
+    margin: 4px; border: 1px solid rgba(255,255,255,0.06);
+  }
+  .section {
+    background: #152232;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 16px 0;
+    border: 1px solid rgba(255,255,255,0.04);
+    transition: border-color 0.3s;
+  }
+  .section:hover { border-color: rgba(249,115,22,0.25); }
+  .section-number {
+    display: inline-block;
+    background: #f97316;
+    color: #fff;
+    width: 28px; height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .section.opening .section-number { background: #f97316; }
+  .section.closing .section-number { background: #0F9D58; }
+  .section-title { font-size: 16px; font-weight: 600; color: #fff; vertical-align: middle; }
+  .section-tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  .tag-hot { background: #dc2626; color: #fff; }
+  .tag-trend { background: #0F9D58; color: #fff; }
+  .tag-business { background: #7c3aed; color: #fff; }
+  .tag-policy { background: #F59E0B; color: #fff; }
+  .tag-security { background: #0ea5e9; color: #fff; }
+  .section p {
+    margin-top: 12px;
+    line-height: 1.8;
+    font-size: 15px;
+    color: #b0bec5;
+    text-align: justify;
+  }
+  .footer { text-align: center; padding: 30px 0; color: #4a5568; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>今日体育八大新闻</h1>
+    <div class="subtitle">1个数字 · 8条新闻 · 快速了解体育动态</div>
+    <div class="date">📅 2026年7月6日（星期一）</div>
+  </div>
+  <div class="player">
+    <div class="player-title">
+      🎙️ 今日体育八大新闻
+      <span class="playing-indicator" id="playingIndicator">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        正在播放
+      </span>
+    </div>
+    <audio id="audioPlayer" preload="auto">
+      <source src="sport_20260706.mp3" type="audio/mpeg">
+    </audio>
+    <div class="ctrl-row">
+      <button class="play-btn" id="playBtn" title="播放 / 暂停">▶</button>
+      <div class="prog-area">
+        <span class="time-el" id="curTime">00:00</span>
+        <div class="prog-track" id="progTrack">
+          <div class="prog-fill" id="progFill"></div>
+        </div>
+        <span class="time-el" id="totTime">00:00</span>
+      </div>
+      <div class="vol-area">
+        <span class="vol-icon" id="volIcon" title="静音/恢复">🔊</span>
+        <input type="range" class="vol-slider" id="volSlider" min="0" max="100" value="80">
+      </div>
+    </div>
+  </div>
+  <div class="tags">
+    <span>#体育</span>
+  </div>
+  <div class="section opening">
+    <span class="section-number">导</span>
+    <span class="section-title">开场</span>
+    <p>大家好，欢迎收看今日体育科技速报。今天是2026年7月6日，星期一。 下面是今天体育领域的8条最新资讯：</p>
+  </div>
+
+  <div class="section">
+    <span class="section-number">1</span>
+    <span class="section-title">FOX体育公布2026世界杯16强转播安排</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>FOX体育公布了2026年国际足联世界杯16强淘汰赛的详细转播安排，美国男足队的比赛将被重点报道，全球观众可通过多个平台观看精彩赛事。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">2</span>
+    <span class="section-title">2026 NBA自由球员市场完全指南</span>
+    <span class="section-tag tag-business">💼 商业</span>
+    <p>2026年NBA自由球员市场即将开启，本文为您提供所有需要了解的信息，包括顶级球员动向、球队薪资空间和潜在转会预测。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">3</span>
+    <span class="section-title">罗比·雷投6局阿德斯助巨人队6-4胜洛基山队</span>
+    <span class="section-tag tag-trend">📱 应用</span>
+    <p>旧金山巨人队在主场以6-4击败科罗拉多洛基山队，罗比·雷投出6局优质先发，威利·阿德斯在第四局贡献4分打点。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">4</span>
+    <span class="section-title">泰勒·弗里茨温布尔登2026下一场比赛</span>
+    <span class="section-tag tag-trend">🚀 前沿</span>
+    <p>美国网球选手泰勒·弗里茨将在温布尔登2026锦标赛中迎战强敌，比赛电视转播时间表和比分结果备受关注。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">5</span>
+    <span class="section-title">2号种子蕾巴金娜温网第三轮出局</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>世界排名第二的爱莲娜·蕾巴金娜在温布尔登第三轮比赛中意外败给埃尔西斯·默滕斯，爆出本届赛事一大冷门。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">6</span>
+    <span class="section-title">高芙温布尔登2026下一场比赛安排</span>
+    <span class="section-tag tag-trend">📱 应用</span>
+    <p>美国网球新星可可·高芙将在温布尔登2026锦标赛中继续征战，比赛电视转播时间表和比分结果备受关注。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">7</span>
+    <span class="section-title">瓦尔迪兹帮助海盗队6-1击败费城人</span>
+    <span class="section-tag tag-business">💼 商业</span>
+    <p>匹兹堡海盗队在主场以6-1击败费城费城人队，完成四连战平局，瓦尔迪兹投出6局仅失1分的优质先发。</p>
+  </div>
+  <div class="section">
+    <span class="section-number">8</span>
+    <span class="section-title">加西亚和莱利各击出两支本垒打国民队9-5大胜海盗</span>
+    <span class="section-tag tag-hot">🔥 最重磅</span>
+    <p>华盛顿国民队在客场以9-5大胜匹兹堡海盗队，加西亚和莱利各击出两支本垒打，成为球队获胜的最大功臣。</p>
+  </div>
+  <div class="section closing">
+    <span class="section-number">结</span>
+    <span class="section-title">总结</span>
+    <p>总结一下，今天的体育领域有几个关键词：FOX体育公布2026世界杯16强转播安排、2026 NBA自由球员市场完全指南、罗比·雷投6局阿德斯助巨人队6-4胜洛基山队、泰勒·弗里茨温布尔登2026下一场比赛、2号种子蕾巴金娜温网第三轮出局、高芙温布尔登2026下一场比赛安排、瓦尔迪兹帮助海盗队6-1击败费城人、加西亚和莱利各击出两支本垒打国民队9-5大胜海盗。体育正在重塑全球行业格局。这就是今天的体育科技速报，我们明天再见，拜拜！</p>
+  </div>
+  <div class="footer">
+    数据来源：FOX Sports · NBA.com · AP News · Sporting News · The Sun Chronicle · Reuters · Modern Ghana<br>
+    仅供学习参考，不构成任何投资或商业决策建议
+  </div>
+</div>
+<script>
+  var audio = document.getElementById('audioPlayer');
+  var playBtn = document.getElementById('playBtn');
+  var progFill = document.getElementById('progFill');
+  var progTrack = document.getElementById('progTrack');
+  var curTimeEl = document.getElementById('curTime');
+  var totTimeEl = document.getElementById('totTime');
+  var playingIndicator = document.getElementById('playingIndicator');
+  var volSlider = document.getElementById('volSlider');
+  var volIcon = document.getElementById('volIcon');
+  audio.volume = 0.8;
+  function fmt(sec) {
+    var m = Math.floor(sec / 60);
+    var s = Math.floor(sec % 60);
+    return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+  }
+  audio.addEventListener('loadedmetadata', function() {
+    totTimeEl.textContent = fmt(audio.duration);
+  });
+  audio.addEventListener('timeupdate', function() {
+    if (audio.duration) {
+      progFill.style.width = (audio.currentTime / audio.duration * 100) + '%';
+      curTimeEl.textContent = fmt(audio.currentTime);
+    }
+  });
+  audio.addEventListener('ended', function() {
+    playBtn.textContent = '▶';
+    playingIndicator.classList.remove('active');
+    progFill.style.width = '100%';
+  });
+  playBtn.addEventListener('click', function() {
+    if (audio.paused) {
+      audio.play();
+      playBtn.textContent = '⏸';
+      playingIndicator.classList.add('active');
+    } else {
+      audio.pause();
+      playBtn.textContent = '▶';
+      playingIndicator.classList.remove('active');
+    }
+  });
+  progTrack.addEventListener('click', function(e) {
+    var rect = progTrack.getBoundingClientRect();
+    audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
+  });
+  volSlider.addEventListener('input', function() {
+    audio.volume = this.value / 100;
+    if (this.value == 0) volIcon.textContent = '🔇';
+    else if (this.value < 50) volIcon.textContent = '🔉';
+    else volIcon.textContent = '🔊';
+  });
+  volIcon.addEventListener('click', function() {
+    if (audio.volume > 0) {
+      audio.volume = 0;
+      volSlider.value = 0;
+      volIcon.textContent = '🔇';
+    } else {
+      audio.volume = 0.8;
+      volSlider.value = 80;
+      volIcon.textContent = '🔊';
+    }
+  });
+</script>
+</body>
+</html>
