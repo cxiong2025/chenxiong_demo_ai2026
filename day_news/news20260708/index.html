@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日新闻聚合 · 2026年7月8日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif; background: #0c1220; color: #d8e0e8; min-height: 100vh; padding: 20px; }
+  .container { max-width: 760px; margin: 0 auto; }
+  .header { text-align: center; padding: 36px 0 32px; }
+  .header h1 { font-size: 30px; color: #fff; margin-bottom: 8px; }
+  .header .subtitle { color: #7a8a9a; font-size: 14px; }
+  .header .date { color: #4a5568; font-size: 13px; margin-top: 6px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .card { background: #152232; border-radius: 16px; padding: 28px 26px; border: 1px solid rgba(255,255,255,0.04); transition: border-color 0.3s, transform 0.2s, box-shadow 0.3s; cursor: pointer; text-decoration: none; display: block; }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,0.3); }
+  .card[data-theme="ai"] { --accent: #3b82f6; }
+  .card[data-theme="sport"] { --accent: #f97316; }
+  .card[data-theme="ent"] { --accent: #a78bfa; }
+  .card[data-theme="robot"] { --accent: #0f9d58; }
+  .card[data-theme="auto"] { --accent: #06b6d4; }
+  .card:hover { border-color: var(--accent); }
+  .card-icon { font-size: 32px; margin-bottom: 12px; }
+  .card-title { font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+  .card-topic { font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+  .card-desc { font-size: 13px; color: #7a8a9a; line-height: 1.6; }
+  .card-date { display: inline-block; margin-top: 14px; font-size: 11px; color: #4a5568; background: #0d1520; padding: 3px 10px; border-radius: 12px; }
+  .card-arrow { display: block; text-align: right; margin-top: 12px; font-size: 16px; opacity: 0; transition: opacity 0.2s; }
+  .card:hover .card-arrow { opacity: 1; }
+  .footer { text-align: center; padding: 36px 0; color: #4a5568; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📰 每日新闻聚合</h1>
+    <div class="subtitle">选择板块，快速进入对应新闻页面 · 每个板块8条新闻</div>
+    <div class="date">2026年7月8日 · 星期三 · 共40条新闻</div>
+  </div>
+  <div class="grid">
+    <a class="card" data-theme="ai" href="ai20260708/ai20260708.html">
+      <div class="card-icon">🤖</div>
+      <div class="card-title">AI 资讯</div>
+      <div class="card-topic" style="color: #3b82f6">AI</div>
+      <div class="card-desc">OpenAI发布GPT-5、Google DeepMind推出新模型、Anthropic发布Claude 4、微软Azure AI服务升级、Meta发布Llama 5、IBM Watson增强企业AI能力、NVIDIA发布新一代AI芯片、苹果Siri集成AI助手</div>
+      <span class="card-date">2026年7月8日</span>
+      <span class="card-arrow" style="color: #3b82f6">→</span>
+    </a>
+    <a class="card" data-theme="sport" href="sport20260708/sport20260708.html">
+      <div class="card-icon">⚽</div>
+      <div class="card-title">体育速递</div>
+      <div class="card-topic" style="color: #f97316">体育</div>
+      <div class="card-desc">FOX体育公布2026世界杯16强转播安排、2026 NBA自由球员市场完全指南、罗比·雷投6局阿德斯助巨人队6-4胜洛基山队、泰勒·弗里茨温布尔登2026下一场比赛、2号种子蕾巴金娜温网第三轮出局、高芙温布尔登2026下一场比赛安排、瓦尔迪兹帮助海盗队6-1击败费城人、加西亚和莱利各击出两支本垒打国民队9-5大胜海盗</div>
+      <span class="card-date">2026年7月8日</span>
+      <span class="card-arrow" style="color: #f97316">→</span>
+    </a>
+    <a class="card" data-theme="ent" href="ent20260708/ent20260708.html">
+      <div class="card-icon">🎬</div>
+      <div class="card-title">娱乐速递</div>
+      <div class="card-topic" style="color: #a78bfa">娱乐</div>
+      <div class="card-desc">HBO七月新片新剧完整列表、泰勒·佩里女王的男人第五季第六集播出、莱昂内尔·里奇安抚粉丝身体无恙、泰勒·弗里茨温布尔登2026下一场比赛、德约科维奇打破费德勒温网纪录、德约科维奇再创温网里程碑晋级八强、纳什维尔星条旗狂欢派对、格莱美奖提名名单公布</div>
+      <span class="card-date">2026年7月8日</span>
+      <span class="card-arrow" style="color: #a78bfa">→</span>
+    </a>
+    <a class="card" data-theme="robot" href="robot20260708/robot20260708.html">
+      <div class="card-icon">🔧</div>
+      <div class="card-title">机器人动态</div>
+      <div class="card-topic" style="color: #0f9d58">机器人</div>
+      <div class="card-desc">日本计划用数百万机器人驱动劳动力、智元机器人第15000台人形机器人下线、中国机器人酒店2027年对外开放、Stride AI发布下一代机器人基础系统、X Square Robot打造全栈式具身智能方案、路特斯首批电动汽车七月抵达加拿大、智元机器人在欧洲首发A3人形机器人、GOKO M6机器人在德国Spoga+gafa展会首秀</div>
+      <span class="card-date">2026年7月8日</span>
+      <span class="card-arrow" style="color: #0f9d58">→</span>
+    </a>
+    <a class="card" data-theme="auto" href="auto20260708/auto20260708.html">
+      <div class="card-icon">🚗</div>
+      <div class="card-title">无人驾驶</div>
+      <div class="card-topic" style="color: #06b6d4">AUTONOMOUS VEHICLES</div>
+      <div class="card-desc">特斯拉持续承诺自动驾驶股票已交付、大众可能放弃其最大的自动驾驶项目投资17亿美元、Gary Black瞄准马斯克的自动驾驶努力Rivian股票rally显示没有新迷恋、我们试用自动驾驶汽车100天它不断犯错、加拿大的自动驾驶汽车导航通往无司机未来的道路、Uber和Waymo结束凤凰城机器人出租车合作、Wayve推动LSE上市86亿美元自动驾驶公司加入私募市场、大众Cariad和博世结束自动驾驶合作</div>
+      <span class="card-date">2026年7月8日</span>
+      <span class="card-arrow" style="color: #06b6d4">→</span>
+    </a>
+  </div>
+  <div class="footer">
+    每日新闻聚合系统 · 点击卡片即可跳转<br>
+    数据来源：各板块独立标注 · 仅供学习参考
+  </div>
+</div>
+</body>
+</html>
