@@ -1,0 +1,50 @@
+[
+  {
+    "title": "OpenAI发布GPT-5.5，多模态能力全面升级",
+    "summary": "OpenAI正式发布GPT-5.5模型，在视觉理解、代码生成和逻辑推理方面实现重大突破，支持实时视频分析和复杂任务规划。",
+    "tag": "tag-hot",
+    "tag_text": "🔥 最重磅"
+  },
+  {
+    "title": "Google DeepMind推出AlphaCode 3，编程能力跃升",
+    "summary": "谷歌DeepMind发布AlphaCode 3，在编程竞赛中得分进入全球前5%，AI辅助编程进入新时代。",
+    "tag": "tag-business",
+    "tag_text": "💼 商业"
+  },
+  {
+    "title": "Anthropic Claude 4发布，安全对齐技术再突破",
+    "summary": "Anthropic发布Claude 4，在AI安全对齐方面取得重要进展，减少幻觉和偏见，企业级应用更加可靠。",
+    "tag": "tag-security",
+    "tag_text": "🔒 安全"
+  },
+  {
+    "title": "中国AI芯片寒武纪发布新一代训练芯片",
+    "summary": "寒武纪发布新一代AI训练芯片，性能提升4倍，成本降低35%，国产AI算力自主可控迈出关键一步。",
+    "tag": "tag-policy",
+    "tag_text": "🏛️ 政策"
+  },
+  {
+    "title": "Meta开源Llama 5大模型，开发者生态爆发",
+    "summary": "Meta正式发布Llama 5开源大模型，支持多语言和多模态，24小时内下载量突破200万次。",
+    "tag": "tag-trend",
+    "tag_text": "📱 应用"
+  },
+  {
+    "title": "AI大模型推理成本下降90%，商业化加速",
+    "summary": "随着硬件进步和算法优化，AI大模型推理成本大幅下降，企业AI应用门槛显著降低。",
+    "tag": "tag-business",
+    "tag_text": "💼 商业"
+  },
+  {
+    "title": "腾讯混元大模型支持万亿参数，推理速度提升5倍",
+    "summary": "腾讯混元大模型完成重大升级，支持万亿参数规模，推理速度提升5倍，企业服务能力显著增强。",
+    "tag": "tag-trend",
+    "tag_text": "🚀 前沿"
+  },
+  {
+    "title": "百度文心一言4.5发布，知识问答能力行业领先",
+    "summary": "百度发布文心一言4.5版本，在知识问答、创意写作和多轮对话方面达到行业领先水平。",
+    "tag": "tag-hot",
+    "tag_text": "🔥 最重磅"
+  }
+]
