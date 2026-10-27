@@ -8,18 +8,18 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
-    background: #06b6d4;
-    color: #06b6d4;
+    background: #0c1220;
+    color: #d8e0e8;
     min-height: 100vh;
     padding: 20px;
   }
   .container { max-width: 740px; margin: 0 auto; }
   .header { text-align: center; padding: 30px 0 20px; }
   .header h1 { font-size: 28px; color: #fff; margin-bottom: 8px; }
-  .header .subtitle { color: #06b6d4; font-size: 14px; }
-  .header .date { color: #06b6d4; font-size: 13px; margin-top: 4px; }
+  .header .subtitle { color: #7a8a9a; font-size: 14px; }
+  .header .date { color: #7a8a9a; font-size: 13px; margin-top: 4px; }
   .player {
-    background: #06b6d4;
+    background: #19273a;
     border-radius: 16px;
     padding: 24px 28px;
     margin: 20px 0;
@@ -71,16 +71,16 @@
     line-height: 1;
   }
   .prog-area { flex: 1; display: flex; align-items: center; gap: 10px; }
-  .time-el { font-size: 13px; color: #06b6d4; white-space: nowrap; font-variant-numeric: tabular-nums; min-width: 38px; }
-  .prog-track { flex: 1; height: 8px; background: #06b6d4; border-radius: 4px; cursor: pointer; position: relative; }
+  .time-el { font-size: 13px; color: #7a8a9a; white-space: nowrap; font-variant-numeric: tabular-nums; min-width: 38px; }
+  .prog-track { flex: 1; height: 8px; background: #0d1520; border-radius: 4px; cursor: pointer; position: relative; }
   .prog-fill { height: 100%; background: #06b6d4; border-radius: 4px; width: 0%; transition: width 0.15s linear; }
   .vol-area { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
-  .vol-icon { font-size: 16px; cursor: pointer; color: #06b6d4; transition: color 0.2s; }
+  .vol-icon { font-size: 16px; cursor: pointer; color: #7a8a9a; transition: color 0.2s; }
   .vol-icon:hover { color: #06b6d4; }
   .vol-slider {
     width: 70px; height: 4px;
     -webkit-appearance: none; appearance: none;
-    background: #06b6d4; border-radius: 2px;
+    background: #0d1520; border-radius: 2px;
     outline: none; cursor: pointer;
   }
   .vol-slider::-webkit-slider-thumb {
@@ -91,12 +91,12 @@
   }
   .tags { text-align: center; margin: 10px 0 20px; }
   .tags span {
-    display: inline-block; background: #06b6d4; color: #06b6d4;
+    display: inline-block; background: #152232; color: #7a8a9a;
     padding: 4px 12px; border-radius: 20px; font-size: 12px;
     margin: 4px; border: 1px solid rgba(255,255,255,0.06);
   }
   .section {
-    background: #06b6d4;
+    background: #152232;
     border-radius: 12px;
     padding: 20px 24px;
     margin: 16px 0;
@@ -118,7 +118,7 @@
     vertical-align: middle;
   }
   .section.opening .section-number { background: #06b6d4; }
-  .section.closing .section-number { background: #06b6d4; }
+  .section.closing .section-number { background: #0F9D58; }
   .section-title { font-size: 16px; font-weight: 600; color: #fff; vertical-align: middle; }
   .section-tag {
     display: inline-block;
@@ -128,31 +128,31 @@
     margin-left: 10px;
     vertical-align: middle;
   }
-  .tag-hot { background: #06b6d4; color: #fff; }
-  .tag-trend { background: #06b6d4; color: #fff; }
-  .tag-business { background: #06b6d4; color: #fff; }
-  .tag-policy { background: #06b6d4; color: #fff; }
-  .tag-security { background: #06b6d4; color: #fff; }
+  .tag-hot { background: #dc2626; color: #fff; }
+  .tag-trend { background: #0F9D58; color: #fff; }
+  .tag-business { background: #7c3aed; color: #fff; }
+  .tag-policy { background: #F59E0B; color: #fff; }
+  .tag-security { background: #0ea5e9; color: #fff; }
   .section p {
     margin-top: 12px;
     line-height: 1.8;
     font-size: 15px;
-    color: #06b6d4;
+    color: #b0bec5;
     text-align: justify;
   }
-  .footer { text-align: center; padding: 30px 0; color: #06b6d4; font-size: 12px; }
+  .footer { text-align: center; padding: 30px 0; color: #4a5568; font-size: 12px; }
 </style>
 </head>
 <body>
 <div class="container">
   <div class="header">
-    <h1>今日无人驾驶八大新闻</h1>
-    <div class="subtitle">1个数字 · 8条新闻 · 快速了解无人驾驶动态</div>
+    <h1>今日AI八大新闻</h1>
+    <div class="subtitle">1个数字 · 8条新闻 · 快速了解AI动态</div>
     <div class="date">📅 2026年10月27日（星期二）</div>
   </div>
   <div class="player">
     <div class="player-title">
-      🎙️ 今日无人驾驶八大新闻
+      🎙️ 今日AI八大新闻
       <span class="playing-indicator" id="playingIndicator">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
         正在播放
@@ -177,37 +177,37 @@
     </div>
   </div>
   <div class="tags">
-    <span>#无人驾驶</span>
+    <span>#AI</span>
   </div>
   <div class="section opening">
     <span class="section-number">导</span>
     <span class="section-title">开场</span>
-    <p>大家好，欢迎收看今日无人驾驶科技速报。今天是2026年10月27日，星期二。 下面是今天无人驾驶领域的8条最新资讯：</p>
+    <p>大家好，欢迎收看今日AI科技速报。今天是2026年10月27日，星期二。 下面是今天AI领域的8条最新资讯：</p>
   </div>
   
   <div class="section">
     <span class="section-number">1</span>
-    <span class="section-title">Open无人驾驶发布GPT-5.5，多模态能力全面升级</span>
+    <span class="section-title">OpenAI发布GPT-5.5，多模态能力全面升级</span>
     <span class="section-tag tag-hot">🔥 最重磅</span>
-    <p>Open无人驾驶正式发布GPT-5.5模型，在视觉理解、代码生成和逻辑推理方面实现重大突破，支持实时视频分析和复杂任务规划。</p>
+    <p>OpenAI正式发布GPT-5.5模型，在视觉理解、代码生成和逻辑推理方面实现重大突破，支持实时视频分析和复杂任务规划。</p>
   </div>
   <div class="section">
     <span class="section-number">2</span>
     <span class="section-title">Google DeepMind推出AlphaCode 3，编程能力跃升</span>
     <span class="section-tag tag-business">💼 商业</span>
-    <p>谷歌DeepMind发布AlphaCode 3，在编程竞赛中得分进入全球前5%，无人驾驶辅助编程进入新时代。</p>
+    <p>谷歌DeepMind发布AlphaCode 3，在编程竞赛中得分进入全球前5%，AI辅助编程进入新时代。</p>
   </div>
   <div class="section">
     <span class="section-number">3</span>
     <span class="section-title">Anthropic Claude 4发布，安全对齐技术再突破</span>
     <span class="section-tag tag-security">🔒 安全</span>
-    <p>Anthropic发布Claude 4，在无人驾驶安全对齐方面取得重要进展，减少幻觉和偏见，企业级应用更加可靠。</p>
+    <p>Anthropic发布Claude 4，在AI安全对齐方面取得重要进展，减少幻觉和偏见，企业级应用更加可靠。</p>
   </div>
   <div class="section">
     <span class="section-number">4</span>
-    <span class="section-title">中国无人驾驶芯片寒武纪发布新一代训练芯片</span>
+    <span class="section-title">中国AI芯片寒武纪发布新一代训练芯片</span>
     <span class="section-tag tag-policy">🏛️ 政策</span>
-    <p>寒武纪发布新一代无人驾驶训练芯片，性能提升4倍，成本降低35%，国产无人驾驶算力自主可控迈出关键一步。</p>
+    <p>寒武纪发布新一代AI训练芯片，性能提升4倍，成本降低35%，国产AI算力自主可控迈出关键一步。</p>
   </div>
   <div class="section">
     <span class="section-number">5</span>
@@ -217,9 +217,9 @@
   </div>
   <div class="section">
     <span class="section-number">6</span>
-    <span class="section-title">无人驾驶大模型推理成本下降90%，商业化加速</span>
+    <span class="section-title">AI大模型推理成本下降90%，商业化加速</span>
     <span class="section-tag tag-business">💼 商业</span>
-    <p>随着硬件进步和算法优化，无人驾驶大模型推理成本大幅下降，企业无人驾驶应用门槛显著降低。</p>
+    <p>随着硬件进步和算法优化，AI大模型推理成本大幅下降，企业AI应用门槛显著降低。</p>
   </div>
   <div class="section">
     <span class="section-number">7</span>
@@ -236,7 +236,8 @@
   <div class="section closing">
     <span class="section-number">结</span>
     <span class="section-title">总结</span>
-    <p>总结一下，今天的无人驾驶领域有几个关键词：特斯拉推出FSD V14，自动驾驶体验大幅提升、Waymo扩展至旧金山和洛杉矶，无人驾驶出租车服务覆盖六大城市、百度Apollo萝卜快跑日订单突破10万单、小马智行获准在东京开展Robotaxi商业化运营、蔚来发布第二代换电站，3分钟充满换电完成率99%、小鹏汽车XNGP城市领航辅助覆盖全国300城、宝马与Momenta合作，2027年推出L3级自动驾驶车型、国产激光雷达巨头禾赛科技年出货量突破50万台。无人驾驶正在重塑全球行业格局。</p>
+    <p>总结一下，今天的AI领域有几个关键词：OpenAI发布GPT-5.5、Google DeepMind、Anthropic Claud、中国AI芯片寒武纪发布新一代训、Meta开源Llama 5大模、AI大模型推理成本下降90%，、腾讯混元大模型支持万亿参数，推、百度文心一言4.5发布，知识问。AI正在重塑全球行业格局。
+这就是今天的AI科技速报，我们明天再见，拜拜！</p>
   </div>
   <div class="footer">
     数据来源：各板块独立标注 · 仅供学习参考<br>
